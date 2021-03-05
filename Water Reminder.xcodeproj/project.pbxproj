@@ -13,6 +13,7 @@
 		CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */; };
 		CAD71A5325F2B35D0041733A /* Water_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A5225F2B35D0041733A /* Water_ReminderTests.swift */; };
 		CAD71A5E25F2B35D0041733A /* Water_ReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A5D25F2B35D0041733A /* Water_ReminderUITests.swift */; };
+		CAD71A7525F2C9130041733A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A7425F2C9130041733A /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		CAD71A5925F2B35D0041733A /* Water ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water ReminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A5D25F2B35D0041733A /* Water_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderUITests.swift; sourceTree = "<group>"; };
 		CAD71A5F25F2B35D0041733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD71A7425F2C9130041733A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */,
 				CAD71A4225F2B35A0041733A /* ContentView.swift */,
+				CAD71A7425F2C9130041733A /* ImageView.swift */,
 				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
 				CAD71A4925F2B35C0041733A /* Info.plist */,
 				CAD71A4625F2B35C0041733A /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD71A7525F2C9130041733A /* ImageView.swift in Sources */,
 				CAD71A4325F2B35A0041733A /* ContentView.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
 			);
@@ -422,7 +426,7 @@
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +448,7 @@
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
