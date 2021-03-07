@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04B4F825F3A7A600F64F6D /* MainView.swift */; };
-		CA22604225F3E93600EB4E32 /* MenuSectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22604125F3E93600EB4E32 /* MenuSectionsData.swift */; };
 		CA22605625F3F3CB00EB4E32 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605525F3F3CB00EB4E32 /* SectionView.swift */; };
 		CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605D25F3F56100EB4E32 /* MenuView.swift */; };
 		CA22607025F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */; };
 		CA22607B25F40DDF00EB4E32 /* WiderDivisorVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */; };
+		CA475B6625F50722000535D0 /* MenuSectionsViewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */; };
+		CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6E25F50B75000535D0 /* DailyModeView.swift */; };
+		CA475B7425F50B81000535D0 /* FreeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7325F50B81000535D0 /* FreeModeView.swift */; };
+		CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7825F50B91000535D0 /* Drink&RestView.swift */; };
+		CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7D25F50B9F000535D0 /* StatisticsView.swift */; };
+		CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B8225F50BAC000535D0 /* SettingsView.swift */; };
 		CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */; };
-		CAD71A4325F2B35A0041733A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A4225F2B35A0041733A /* ContentView.swift */; };
 		CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4425F2B35C0041733A /* Assets.xcassets */; };
 		CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */; };
 		CAD71A5325F2B35D0041733A /* Water_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A5225F2B35D0041733A /* Water_ReminderTests.swift */; };
 		CAD71A5E25F2B35D0041733A /* Water_ReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A5D25F2B35D0041733A /* Water_ReminderUITests.swift */; };
-		CAD71A7525F2C9130041733A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A7425F2C9130041733A /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +44,18 @@
 
 /* Begin PBXFileReference section */
 		CA04B4F825F3A7A600F64F6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CA22604125F3E93600EB4E32 /* MenuSectionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionsData.swift; sourceTree = "<group>"; };
 		CA22605525F3F3CB00EB4E32 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		CA22605D25F3F56100EB4E32 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiderDivisorHorizontal.swift; sourceTree = "<group>"; };
 		CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiderDivisorVertical.swift; sourceTree = "<group>"; };
+		CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionsViewsModel.swift; sourceTree = "<group>"; };
+		CA475B6E25F50B75000535D0 /* DailyModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModeView.swift; sourceTree = "<group>"; };
+		CA475B7325F50B81000535D0 /* FreeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeModeView.swift; sourceTree = "<group>"; };
+		CA475B7825F50B91000535D0 /* Drink&RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink&RestView.swift"; sourceTree = "<group>"; };
+		CA475B7D25F50B9F000535D0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		CA475B8225F50BAC000535D0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CAD71A3D25F2B35A0041733A /* Water Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderApp.swift; sourceTree = "<group>"; };
-		CAD71A4225F2B35A0041733A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAD71A4425F2B35C0041733A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAD71A4925F2B35C0041733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		CAD71A5925F2B35D0041733A /* Water ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water ReminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A5D25F2B35D0041733A /* Water_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderUITests.swift; sourceTree = "<group>"; };
 		CAD71A5F25F2B35D0041733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAD71A7425F2C9130041733A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA475B6D25F50B5D000535D0 /* Modes and Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CA475B6E25F50B75000535D0 /* DailyModeView.swift */,
+				CA475B7325F50B81000535D0 /* FreeModeView.swift */,
+				CA475B7825F50B91000535D0 /* Drink&RestView.swift */,
+				CA475B7D25F50B9F000535D0 /* StatisticsView.swift */,
+				CA475B8225F50BAC000535D0 /* SettingsView.swift */,
+			);
+			path = "Modes and Settings";
+			sourceTree = "<group>";
+		};
 		CAD71A3425F2B35A0041733A = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +130,9 @@
 			children = (
 				CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */,
 				CA04B4F825F3A7A600F64F6D /* MainView.swift */,
-				CAD71A4225F2B35A0041733A /* ContentView.swift */,
-				CAD71A7425F2C9130041733A /* ImageView.swift */,
-				CA22605525F3F3CB00EB4E32 /* SectionView.swift */,
 				CA22605D25F3F56100EB4E32 /* MenuView.swift */,
+				CA22605525F3F3CB00EB4E32 /* SectionView.swift */,
+				CA475B6D25F50B5D000535D0 /* Modes and Settings */,
 				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
 				CAD71A4925F2B35C0041733A /* Info.plist */,
 				CAD71A4625F2B35C0041733A /* Preview Content */,
@@ -152,7 +169,7 @@
 		CAF37BF825F3B38400FD5060 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CA22604125F3E93600EB4E32 /* MenuSectionsData.swift */,
+				CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */,
 				CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */,
 				CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */,
 			);
@@ -288,15 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA475B7425F50B81000535D0 /* FreeModeView.swift in Sources */,
 				CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */,
-				CAD71A7525F2C9130041733A /* ImageView.swift in Sources */,
+				CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */,
 				CA22607B25F40DDF00EB4E32 /* WiderDivisorVertical.swift in Sources */,
-				CA22604225F3E93600EB4E32 /* MenuSectionsData.swift in Sources */,
+				CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */,
 				CA22605625F3F3CB00EB4E32 /* SectionView.swift in Sources */,
+				CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */,
 				CA22607025F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift in Sources */,
 				CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */,
-				CAD71A4325F2B35A0041733A /* ContentView.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
+				CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */,
+				CA475B6625F50722000535D0 /* MenuSectionsViewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,14 @@ struct WiderDivisorHorizontal: View {
     
     var color: Color = .gray
     var width: CGFloat = 5
+    var height: CGFloat = .infinity
+    var opacity: Double = 1
     
     var body: some View {
         Rectangle()
             .fill(color)
-            .frame(height: width)
+            .opacity(opacity)
+            .frame(width: height, height: width)
             .edgesIgnoringSafeArea(.horizontal)
     }
 }
