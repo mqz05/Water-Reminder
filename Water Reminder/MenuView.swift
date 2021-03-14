@@ -35,8 +35,6 @@ struct MenuView: View {
             
         }.navigationBarHidden(true)
     }
-    // CHECKEAR .onAppear y .hidden (para mostrar y esconder la lista de modos, titulo de "Menu", settings, etc.
-    
 }
 
 /*
