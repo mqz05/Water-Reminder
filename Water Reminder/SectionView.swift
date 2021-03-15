@@ -31,7 +31,7 @@ struct SectionView: View {
                 .opacity(0)
                 .border(Color.white, width: 4)
                 .cornerRadius(20)
-                
+            
         }
     }
 }

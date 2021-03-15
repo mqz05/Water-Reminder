@@ -44,6 +44,12 @@ struct DailyModeView_Previews: PreviewProvider {
     }
 }
 
+
+
+//
+// MARK: Titulo e Imagen
+//
+
 struct TitleAndImage: View {
     var body: some View {
         VStack(spacing: 5) {
@@ -58,13 +64,19 @@ struct TitleAndImage: View {
                 .frame(maxWidth: 500, maxHeight: 500)
                 .clipShape(Circle())
                 .overlay(Circle()
-                            .stroke(Color.orange, lineWidth: 6))
+                    .stroke(Color.orange, lineWidth: 6))
                 .shadow(color: Color.yellow, radius: 20)
                 .padding(.vertical, 35.0)
                 .padding(.bottom, 15)
         }
     }
 }
+
+
+
+//
+// MARK: Boton Bebidas
+//
 
 struct DrinksButton: View {
     var body: some View {
@@ -83,13 +95,19 @@ struct DrinksButton: View {
                     .frame(maxWidth: 100, maxHeight: 100)
                     .clipShape(Circle())
                     .overlay(Circle()
-                                .stroke(Color.green, lineWidth: 6))
+                        .stroke(Color.green, lineWidth: 6))
                     .foregroundColor(Color.white)
             })
         }
         .padding(.bottom, 30.0)
     }
 }
+
+
+
+//
+// MARK: Botones para Seleccionar la Cantidad de Bebida
+//
 
 struct AddQuantityButtons: View {
     
@@ -103,23 +121,23 @@ struct AddQuantityButtons: View {
                 Button(action: {
                     if numeroBoton == 1 {
                         // Añadir 10ml
-                        waterAmount = waterAmount + 10
+                        self.waterAmount = self.waterAmount + 10
                         
                     } else if numeroBoton == 2 {
                         // Añadir 50ml
-                        waterAmount = waterAmount + 50
+                        self.waterAmount = self.waterAmount + 50
                         
                     } else if numeroBoton == 3 {
                         // Añadir 100ml
-                        waterAmount = waterAmount + 100
+                        self.waterAmount = self.waterAmount + 100
                         
                     } else if numeroBoton == 4 {
                         // Añadir 150ml
-                        waterAmount = waterAmount + 150
+                        self.waterAmount = self.waterAmount + 150
                         
                     } else {
                         // Añadir 200ml
-                        waterAmount = waterAmount + 200
+                        self.waterAmount = self.waterAmount + 200
                         
                     }
                 }, label: {
@@ -128,7 +146,7 @@ struct AddQuantityButtons: View {
                         .frame(maxWidth: 100, maxHeight: 100)
                         .clipShape(Circle())
                         .overlay(Circle()
-                                    .stroke(Color.green, lineWidth: 6))
+                            .stroke(Color.green, lineWidth: 6))
                         .foregroundColor(Color.white)
                 })
             }
@@ -136,6 +154,12 @@ struct AddQuantityButtons: View {
         .padding(.bottom, 30.0)
     }
 }
+
+
+
+//
+// MARK: Vista de la Cantidad de Bebida Seleccionada
+//
 
 struct TotalAmountView: View {
     
@@ -152,6 +176,11 @@ struct TotalAmountView: View {
     }
 }
 
+
+//
+// MARK: Boton Añadir Cantidad de Bebida al Total
+//
+
 struct AddAndResetButtons: View {
     
     @Binding var addWaterAmount: Int
@@ -162,13 +191,13 @@ struct AddAndResetButtons: View {
     
     @Binding var porcentaje: CGFloat
     
+    @State private var showConfirmation: Bool = false
+    
     var body: some View {
         HStack {
             Button(action: {
                 // Añadir Cantidad (Boton Add)
-                totalWaterAmount = totalWaterAmount + addWaterAmount
-                addWaterAmount = 0
-                porcentaje = calcularPorcentaje() / 100
+                self.showConfirmation = true
                 
             }, label: {
                 Image(systemName: "plus.rectangle.fill")
@@ -177,11 +206,11 @@ struct AddAndResetButtons: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(25)
             })
-            .padding(.leading, 250)
+                .padding(.leading, 250)
             
             Button(action: {
                 // Restablecer Cantidad (Boton Reset)
-                addWaterAmount = 0
+                self.addWaterAmount = 0
                 
             }, label: {
                 Image(systemName: "minus.circle.fill")
@@ -189,18 +218,38 @@ struct AddAndResetButtons: View {
                     .frame(maxWidth: 100, maxHeight: 75)
                     .foregroundColor(Color.white)
             })
-            .padding(.leading, 150)
+                .padding(.leading, 150)
         }
         .padding(.bottom, 5.0)
+            
+            // PROBAR: Alerta de confirmacion para añadir cantidad de bebida al total
+        .alert(isPresented: $showConfirmation, content: {
+            Alert(
+                title: Text("Are you sure you want to add this?"),
+                message: Text("There is no undo"),
+                primaryButton: .destructive(Text("Add")) {
+                    self.totalWaterAmount = self.totalWaterAmount + self.addWaterAmount
+                    self.addWaterAmount = 0
+                    self.porcentaje = self.calcularPorcentaje() / 100
+                },
+                secondaryButton: .cancel()
+            )
+        })
     }
     
+    // FUNCION: calcular el porcentaje para la barra de progreso
     func calcularPorcentaje() -> CGFloat {
-        
         let nuevoPorcentaje = totalWaterAmount * 100 / waterObjective
         
         return CGFloat(nuevoPorcentaje)
     }
 }
+
+
+
+//
+// MARK: Barra de Progreso
+//
 
 struct BarraDeProgreso: View {
     
@@ -228,6 +277,7 @@ struct BarraDeProgreso: View {
         }.offset(x: 355, y: -190)
     }
     
+    // FUNCION: calcular el cambio de la barra de progreso
     func cambiarBarraPorcentaje() -> CGFloat {
         let altura = 700
         var nuevoTamaño = CGFloat(altura) * self.porcentaje

@@ -17,6 +17,7 @@ struct MenuView: View {
         ZStack {
             BackgroundView(topColor: Color(#colorLiteral(red: 0.1829789287, green: 0.2423677345, blue: 1, alpha: 1)), bottomColor: Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)))
             
+            
             VStack(alignment: .leading, spacing: 10) {
                 MenuTitle(isShowing: $isShowing)
                 
@@ -38,11 +39,17 @@ struct MenuView: View {
 }
 
 /*
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView(isShowing: .constant(true), home: .constant(HomeView(firstView: DailyModeView())).previewLayout (.device)
-    }
-}*/
+ struct MenuView_Previews: PreviewProvider {
+ static var previews: some View {
+ MenuView(isShowing: .constant(true), home: .constant(HomeView(firstView: DailyModeView())).previewLayout (.device)
+ }
+ }*/
+
+
+
+//
+// MARK: Titulo del Menu
+//
 
 struct MenuTitle: View {
     
@@ -74,6 +81,12 @@ struct MenuTitle: View {
     }
 }
 
+
+
+//
+// MARK: Modos del Menu
+//
+
 struct MenuModes: View {
     
     @Binding var home: HomeView
@@ -90,16 +103,17 @@ struct MenuModes: View {
                             // Tal vez poner animacion de cargando
                         })})
                         
-                    },
+                },
                     label: {
                         SectionView(section: seccion).border(Color.black, width: 2)
-                    })
+                })
             }
         }
         .padding(.top, 20)
     }
 }
 
+// FUNCION: cambio a la vista seleccionada
 
 func findSelectedView(sectionName: String) -> AnyView {
     if sectionName == "Daily Mode" {
@@ -118,6 +132,12 @@ func findSelectedView(sectionName: String) -> AnyView {
         return AnyView(DailyModeView())
     }
 }
+
+
+
+//
+// MARK: Configuracion
+//
 
 struct Settings: View {
     var body: some View {

@@ -34,8 +34,8 @@ struct MainView: View {
                             isShowing.toggle()
                         })
                     }, label: {
-                    Image(systemName: "list.bullet.rectangle").resizable().frame(width: 40, height: 30).foregroundColor(.black)
-                }))
+                        Image(systemName: "list.bullet.rectangle").resizable().frame(width: 40, height: 30).foregroundColor(.black)
+                    }))
                     .ignoresSafeArea()
                     .allowsHitTesting(!isShowing)
                 
@@ -52,7 +52,7 @@ struct MainView: View {
                         .opacity(0.1)
                 }
             }
-
+            
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -62,6 +62,11 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+
+//
+// MARK: Vista de Fondo Degradado
+//
 
 struct BackgroundView: View {
     var topColor: Color
