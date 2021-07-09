@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04B4F825F3A7A600F64F6D /* MainView.swift */; };
+		CA2195412673FEC9004340B3 /* TiposDeBebidasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2195402673FEC9004340B3 /* TiposDeBebidasData.swift */; };
 		CA22605625F3F3CB00EB4E32 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605525F3F3CB00EB4E32 /* SectionView.swift */; };
 		CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605D25F3F56100EB4E32 /* MenuView.swift */; };
-		CA22607025F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */; };
-		CA22607B25F40DDF00EB4E32 /* WiderDivisorVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */; };
 		CA475B6625F50722000535D0 /* MenuSectionsViewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */; };
 		CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6E25F50B75000535D0 /* DailyModeView.swift */; };
 		CA475B7425F50B81000535D0 /* FreeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7325F50B81000535D0 /* FreeModeView.swift */; };
 		CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7825F50B91000535D0 /* Drink&RestView.swift */; };
 		CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7D25F50B9F000535D0 /* StatisticsView.swift */; };
 		CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B8225F50BAC000535D0 /* SettingsView.swift */; };
+		CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */; };
 		CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */; };
 		CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4425F2B35C0041733A /* Assets.xcassets */; };
 		CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */; };
@@ -44,16 +44,16 @@
 
 /* Begin PBXFileReference section */
 		CA04B4F825F3A7A600F64F6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CA2195402673FEC9004340B3 /* TiposDeBebidasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiposDeBebidasData.swift; sourceTree = "<group>"; };
 		CA22605525F3F3CB00EB4E32 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		CA22605D25F3F56100EB4E32 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiderDivisorHorizontal.swift; sourceTree = "<group>"; };
-		CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiderDivisorVertical.swift; sourceTree = "<group>"; };
 		CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionsViewsModel.swift; sourceTree = "<group>"; };
 		CA475B6E25F50B75000535D0 /* DailyModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModeView.swift; sourceTree = "<group>"; };
 		CA475B7325F50B81000535D0 /* FreeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeModeView.swift; sourceTree = "<group>"; };
 		CA475B7825F50B91000535D0 /* Drink&RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink&RestView.swift"; sourceTree = "<group>"; };
 		CA475B7D25F50B9F000535D0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		CA475B8225F50BAC000535D0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasPersonalizadas.swift; sourceTree = "<group>"; };
 		CAD71A3D25F2B35A0041733A /* Water Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderApp.swift; sourceTree = "<group>"; };
 		CAD71A4425F2B35C0041733A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				CA475B6525F50722000535D0 /* MenuSectionsViewsModel.swift */,
-				CA22606F25F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift */,
-				CA22607A25F40DDF00EB4E32 /* WiderDivisorVertical.swift */,
+				CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */,
+				CA2195402673FEC9004340B3 /* TiposDeBebidasData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -308,11 +308,11 @@
 				CA475B7425F50B81000535D0 /* FreeModeView.swift in Sources */,
 				CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */,
 				CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */,
-				CA22607B25F40DDF00EB4E32 /* WiderDivisorVertical.swift in Sources */,
 				CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */,
+				CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */,
 				CA22605625F3F3CB00EB4E32 /* SectionView.swift in Sources */,
+				CA2195412673FEC9004340B3 /* TiposDeBebidasData.swift in Sources */,
 				CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */,
-				CA22607025F3FCAC00EB4E32 /* WiderDivisorHorizontal.swift in Sources */,
 				CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
 				CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */,
@@ -478,7 +478,7 @@
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +500,7 @@
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

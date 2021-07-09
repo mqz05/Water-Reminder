@@ -12,6 +12,7 @@ enum MenuSectionsViewsModel: Int, CaseIterable {
     case freeMode
     case drinkRest
     case statistics
+    case settings
     
     var sectionName: String {
         switch self {
@@ -19,6 +20,7 @@ enum MenuSectionsViewsModel: Int, CaseIterable {
         case .freeMode: return "Free Mode"
         case .drinkRest: return "Drink & Rest"
         case .statistics: return "Statistics"
+        case .settings: return "Settings"
         }
     }
     
@@ -28,6 +30,7 @@ enum MenuSectionsViewsModel: Int, CaseIterable {
         case .freeMode: return "questionmark.square.dashed"
         case .drinkRest: return "pause.circle"
         case .statistics: return "arrow.up.arrow.down.circle"
+        case .settings: return "Settings Icon"
         }
     }
 }

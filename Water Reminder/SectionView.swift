@@ -10,34 +10,27 @@ import SwiftUI
 struct SectionView: View {
     
     var section: MenuSectionsViewsModel
+    @Binding var modoSeleccionado: String
     
     var body: some View {
-        ZStack {
-            VStack(spacing: 10) {
-                Text(section.sectionName)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.black)
+        HStack(spacing: 15) {
+            
+            section.imageName == "Settings Icon" ? Image("\(section.imageName)").resizable().font(.title2).frame(width: 40, height: 40) : Image(systemName: section.imageName).resizable().font(.title2).frame(width: 30, height: 30)
+            
                 
-                Image(systemName: section.imageName)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(Color.black)
-            }
-            .padding(20)
+            /*
+             .resizable()
+             .frame(width: 100, height: 100)
+             .foregroundColor(Color.black)*/
             
-            Rectangle()
-                .frame(width: 235, height: 200)
-                .opacity(0)
-                .border(Color.white, width: 4)
-                .cornerRadius(20)
-            
+            Text(section.sectionName)
+                .fontWeight(.semibold)
+            /*
+             .font(.largeTitle)
+             .fontWeight(.bold)
+             .foregroundColor(Color.black)*/
         }
+        
     }
 }
 
-struct SectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        SectionView(section: .dailyMode)
-    }
-}
