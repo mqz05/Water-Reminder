@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D08C0767C4B37D84285974D /* Pods_Water_ReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93406ADDF341CB85601591D /* Pods_Water_ReminderTests.framework */; };
+		7D3305887A190BE69BB10F4F /* Pods_Water_Reminder_Water_ReminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E14C19340F5E19BD69D4A7 /* Pods_Water_Reminder_Water_ReminderUITests.framework */; };
+		BC553063DC6D963C26352425 /* Pods_Water_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA6022EF89B742AA9339C56 /* Pods_Water_Reminder.framework */; };
 		CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04B4F825F3A7A600F64F6D /* MainView.swift */; };
 		CA2195412673FEC9004340B3 /* TiposDeBebidasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2195402673FEC9004340B3 /* TiposDeBebidasData.swift */; };
 		CA22605625F3F3CB00EB4E32 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605525F3F3CB00EB4E32 /* SectionView.swift */; };
@@ -17,7 +20,10 @@
 		CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7825F50B91000535D0 /* Drink&RestView.swift */; };
 		CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7D25F50B9F000535D0 /* StatisticsView.swift */; };
 		CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B8225F50BAC000535D0 /* SettingsView.swift */; };
+		CA56718F26A04CB000B9504B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56718E26A04CB000B9504B /* AccountView.swift */; };
 		CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */; };
+		CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */; };
+		CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */; };
 		CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */; };
 		CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4425F2B35C0041733A /* Assets.xcassets */; };
 		CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */; };
@@ -43,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		116758173D78C6EEC6947ECF /* Pods-Water Reminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Reminder.debug.xcconfig"; path = "Target Support Files/Pods-Water Reminder/Pods-Water Reminder.debug.xcconfig"; sourceTree = "<group>"; };
+		29E14C19340F5E19BD69D4A7 /* Pods_Water_Reminder_Water_ReminderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_Reminder_Water_ReminderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA6022EF89B742AA9339C56 /* Pods_Water_Reminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_Reminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D961921C0C22530FCC551C /* Pods-Water ReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water ReminderTests.debug.xcconfig"; path = "Target Support Files/Pods-Water ReminderTests/Pods-Water ReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B93406ADDF341CB85601591D /* Pods_Water_ReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_ReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE85689672B49F0FBF5E8F4 /* Pods-Water Reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Reminder.release.xcconfig"; path = "Target Support Files/Pods-Water Reminder/Pods-Water Reminder.release.xcconfig"; sourceTree = "<group>"; };
 		CA04B4F825F3A7A600F64F6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CA2195402673FEC9004340B3 /* TiposDeBebidasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiposDeBebidasData.swift; sourceTree = "<group>"; };
 		CA22605525F3F3CB00EB4E32 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
@@ -53,7 +65,10 @@
 		CA475B7825F50B91000535D0 /* Drink&RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink&RestView.swift"; sourceTree = "<group>"; };
 		CA475B7D25F50B9F000535D0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		CA475B8225F50BAC000535D0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CA56718E26A04CB000B9504B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasPersonalizadas.swift; sourceTree = "<group>"; };
+		CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewAcademy.ttf; sourceTree = "<group>"; };
+		CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAD71A3D25F2B35A0041733A /* Water Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderApp.swift; sourceTree = "<group>"; };
 		CAD71A4425F2B35C0041733A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +80,9 @@
 		CAD71A5925F2B35D0041733A /* Water ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water ReminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A5D25F2B35D0041733A /* Water_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderUITests.swift; sourceTree = "<group>"; };
 		CAD71A5F25F2B35D0041733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8264384A2FAE43F452B2DD9 /* Pods-Water ReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water ReminderTests.release.xcconfig"; path = "Target Support Files/Pods-Water ReminderTests/Pods-Water ReminderTests.release.xcconfig"; sourceTree = "<group>"; };
+		F34DB8B671D95B435816419D /* Pods-Water Reminder-Water ReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Reminder-Water ReminderUITests.release.xcconfig"; path = "Target Support Files/Pods-Water Reminder-Water ReminderUITests/Pods-Water Reminder-Water ReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F715AD696D28FB110FCAD1BD /* Pods-Water Reminder-Water ReminderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Reminder-Water ReminderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Water Reminder-Water ReminderUITests/Pods-Water Reminder-Water ReminderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC553063DC6D963C26352425 /* Pods_Water_Reminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D08C0767C4B37D84285974D /* Pods_Water_ReminderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +106,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3305887A190BE69BB10F4F /* Pods_Water_Reminder_Water_ReminderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E94AE35A13593220EAB43E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AA6022EF89B742AA9339C56 /* Pods_Water_Reminder.framework */,
+				29E14C19340F5E19BD69D4A7 /* Pods_Water_Reminder_Water_ReminderUITests.framework */,
+				B93406ADDF341CB85601591D /* Pods_Water_ReminderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6159EF50F07B16C7EE4AB05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				116758173D78C6EEC6947ECF /* Pods-Water Reminder.debug.xcconfig */,
+				BCE85689672B49F0FBF5E8F4 /* Pods-Water Reminder.release.xcconfig */,
+				F715AD696D28FB110FCAD1BD /* Pods-Water Reminder-Water ReminderUITests.debug.xcconfig */,
+				F34DB8B671D95B435816419D /* Pods-Water Reminder-Water ReminderUITests.release.xcconfig */,
+				80D961921C0C22530FCC551C /* Pods-Water ReminderTests.debug.xcconfig */,
+				E8264384A2FAE43F452B2DD9 /* Pods-Water ReminderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CA475B6D25F50B5D000535D0 /* Modes and Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +144,7 @@
 				CA475B7825F50B91000535D0 /* Drink&RestView.swift */,
 				CA475B7D25F50B9F000535D0 /* StatisticsView.swift */,
 				CA475B8225F50BAC000535D0 /* SettingsView.swift */,
+				CA56718E26A04CB000B9504B /* AccountView.swift */,
 			);
 			path = "Modes and Settings";
 			sourceTree = "<group>";
@@ -112,6 +157,8 @@
 				CAD71A5125F2B35D0041733A /* Water ReminderTests */,
 				CAD71A5C25F2B35D0041733A /* Water ReminderUITests */,
 				CAD71A3E25F2B35A0041733A /* Products */,
+				B6159EF50F07B16C7EE4AB05 /* Pods */,
+				8E94AE35A13593220EAB43E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,7 +181,9 @@
 				CA22605525F3F3CB00EB4E32 /* SectionView.swift */,
 				CA475B6D25F50B5D000535D0 /* Modes and Settings */,
 				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
+				CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */,
 				CAD71A4925F2B35C0041733A /* Info.plist */,
+				CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */,
 				CAD71A4625F2B35C0041733A /* Preview Content */,
 			);
 			path = "Water Reminder";
@@ -183,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAD71A6225F2B35D0041733A /* Build configuration list for PBXNativeTarget "Water Reminder" */;
 			buildPhases = (
+				C7C44A4F1C0BD4361BEFB5FA /* [CP] Check Pods Manifest.lock */,
 				CAD71A3925F2B35A0041733A /* Sources */,
 				CAD71A3A25F2B35A0041733A /* Frameworks */,
 				CAD71A3B25F2B35A0041733A /* Resources */,
+				3F1D70C340C515A0F9802027 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAD71A6525F2B35D0041733A /* Build configuration list for PBXNativeTarget "Water ReminderTests" */;
 			buildPhases = (
+				B727A5E056E3003C1F588B35 /* [CP] Check Pods Manifest.lock */,
 				CAD71A4A25F2B35D0041733A /* Sources */,
 				CAD71A4B25F2B35D0041733A /* Frameworks */,
 				CAD71A4C25F2B35D0041733A /* Resources */,
@@ -218,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAD71A6825F2B35D0041733A /* Build configuration list for PBXNativeTarget "Water ReminderUITests" */;
 			buildPhases = (
+				3BDF84BF879C761DB5C92140 /* [CP] Check Pods Manifest.lock */,
 				CAD71A5525F2B35D0041733A /* Sources */,
 				CAD71A5625F2B35D0041733A /* Frameworks */,
 				CAD71A5725F2B35D0041733A /* Resources */,
+				EF53153BECEEF064DC48ADCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +335,8 @@
 			files = (
 				CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */,
 				CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */,
+				CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */,
+				CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +356,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BDF84BF879C761DB5C92140 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Water Reminder-Water ReminderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F1D70C340C515A0F9802027 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Reminder/Pods-Water Reminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Reminder/Pods-Water Reminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Water Reminder/Pods-Water Reminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B727A5E056E3003C1F588B35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Water ReminderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C44A4F1C0BD4361BEFB5FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Water Reminder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF53153BECEEF064DC48ADCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Reminder-Water ReminderUITests/Pods-Water Reminder-Water ReminderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Reminder-Water ReminderUITests/Pods-Water Reminder-Water ReminderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Water Reminder-Water ReminderUITests/Pods-Water Reminder-Water ReminderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CAD71A3925F2B35A0041733A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -316,6 +475,7 @@
 				CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
 				CA475B7925F50B91000535D0 /* Drink&RestView.swift in Sources */,
+				CA56718F26A04CB000B9504B /* AccountView.swift in Sources */,
 				CA475B6625F50722000535D0 /* MenuSectionsViewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -458,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -470,6 +630,7 @@
 		};
 		CAD71A6325F2B35D0041733A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116758173D78C6EEC6947ECF /* Pods-Water Reminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "muqi.Water-Reminder";
+				PRODUCT_BUNDLE_IDENTIFIER = "mqz.Water-Reminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,6 +653,7 @@
 		};
 		CAD71A6425F2B35D0041733A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE85689672B49F0FBF5E8F4 /* Pods-Water Reminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,7 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "muqi.Water-Reminder";
+				PRODUCT_BUNDLE_IDENTIFIER = "mqz.Water-Reminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,6 +676,7 @@
 		};
 		CAD71A6625F2B35D0041733A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D961921C0C22530FCC551C /* Pods-Water ReminderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +699,7 @@
 		};
 		CAD71A6725F2B35D0041733A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8264384A2FAE43F452B2DD9 /* Pods-Water ReminderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -558,6 +722,7 @@
 		};
 		CAD71A6925F2B35D0041733A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F715AD696D28FB110FCAD1BD /* Pods-Water Reminder-Water ReminderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +743,7 @@
 		};
 		CAD71A6A25F2B35D0041733A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34DB8B671D95B435816419D /* Pods-Water Reminder-Water ReminderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

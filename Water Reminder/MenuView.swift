@@ -142,17 +142,17 @@ struct MenuModes: View {
                 Button(
                     action: {
                         /*
-                        home = HomeView(firstView: findSelectedView(sectionName: seccion.sectionName))
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {withAnimation(.spring(), {
-                            isShowing.toggle()
-                            // Tal vez poner animacion de cargando
-                        })})*/
+                         home = HomeView(firstView: findSelectedView(sectionName: seccion.sectionName))
+                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {withAnimation(.spring(), {
+                         isShowing.toggle()
+                         // Tal vez poner animacion de cargando
+                         })})*/
                         withAnimation(.spring()) {modoSeleccionado = seccion.sectionName}
-                        home = HomeView(firstView: findSelectedView(sectionName: seccion.sectionName))
-                },
+                        home = HomeView(firstView: findSelectedView(sectionName: seccion.sectionName, isShowing: $isShowing))
+                    },
                     label: {
                         SectionView(section: seccion, modoSeleccionado: $modoSeleccionado)
-                            
+                        
                     }).foregroundColor(modoSeleccionado == seccion.sectionName ? .blue : .white)
                     .padding(.vertical, 12)
                     .padding(.horizontal, 20)
@@ -176,7 +176,7 @@ struct MenuModes: View {
 
 // FUNCION: cambio a la vista seleccionada
 
-func findSelectedView(sectionName: String) -> AnyView {
+func findSelectedView(sectionName: String, isShowing: Binding<Bool>) -> AnyView {
     if sectionName == "Daily Mode" {
         modoSeleccionadoActual = "Daily Mode"
         return AnyView(DailyModeView())
@@ -210,16 +210,38 @@ func findSelectedView(sectionName: String) -> AnyView {
 //
 
 struct ManageAccount: View {
+    
+    @EnvironmentObject var viewModel: AppViewModel
+    
     var body: some View {
-        NavigationLink(destination: SettingsView(), label: {
-            HStack(spacing: 15) {
-                Image(systemName: "rectangle.righthalf.inset.fill.arrow.right").resizable().frame(width: 35, height: 26.25).foregroundColor(.white)
+        
+        if viewModel.loggedIn {
+            Button(action: {
+                viewModel.logOut()
                 
-                Text("Log in / Log out"/* cambiar dependiendo si hay una cuenta o no */)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-            }
-        })
+            }, label: {
+                HStack(spacing: 15) {
+                    Image(systemName: "rectangle.righthalf.inset.fill.arrow.right").resizable().frame(width: 35, height: 26.25).foregroundColor(.white)
+                    
+                    Text("Log Out")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                }
+            })
+            
+        } else {
+            
+            NavigationLink(destination: AccountView().frame(width: 834, height: 1400).clipped(), label: {
+                HStack(spacing: 15) {
+                    Image(systemName: "rectangle.righthalf.inset.fill.arrow.right").resizable().frame(width: 35, height: 26.25).foregroundColor(.white)
+                    
+                    Text("Log In")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                }
+            })
+        }
     }
 }

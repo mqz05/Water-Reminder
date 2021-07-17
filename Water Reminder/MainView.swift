@@ -11,6 +11,8 @@ var modoSeleccionadoActual = "Daily Mode"
 
 struct MainView: View {
     
+    @EnvironmentObject var viewModel: AppViewModel
+    
     @State var isShowing = false
     
     @State var modo: MenuSectionsViewsModel = .dailyMode
@@ -27,12 +29,6 @@ struct MainView: View {
                 
                 SetUpHomeView(home: $home, isShowing: $isShowing)
                 
-                
-                
-                // Probar y ver si queda bien
-                //.navigationTitle("Nombre del Modo")
-                //.navigationBarTitleDisplayMode(.inline)
-                
                 if isShowing == true {
                     MiniReturnHomeLayer(isShowing: $isShowing)
                         .cornerRadius(20)
@@ -43,6 +39,9 @@ struct MainView: View {
             }
             
         }.navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            viewModel.loggedIn = viewModel.isLogedIn
+        }
     }
 }
 
@@ -145,7 +144,6 @@ struct SetUpHomeView: View {
                         .frame(width: 40, height: 30)
                         .foregroundColor(.black)
                         .scaleEffect(1.2)
-                    //Image(systemName: "list.bullet.rectangle").resizable().frame(width: 40, height: 30).foregroundColor(.black)
                 }))
                 .ignoresSafeArea()
                 .allowsHitTesting(!isShowing)

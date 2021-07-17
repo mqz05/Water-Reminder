@@ -44,12 +44,12 @@ struct DailyModeView: View {
         }
     }
 }
-
+/*
 struct DailyModeView_Previews: PreviewProvider {
     static var previews: some View {
         DailyModeView()
     }
-}
+}*/
 
 
 //
