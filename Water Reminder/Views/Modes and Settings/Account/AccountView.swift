@@ -6,58 +6,15 @@
 //
 
 import SwiftUI
-import FirebaseAuth
-//import FirebaseFirestore
 
-class AppViewModel: ObservableObject {
-    
-    //let db = Firestore.firestore()
-    
-    let auth = Auth.auth()
-    
-    @Published var loggedIn = false
-    
-    var isLogedIn: Bool {
-        return auth.currentUser != nil
-    }
-    
-    func logIn(email: String, password: String) {
-        auth.signIn(withEmail: email, password: password) { [weak self] result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                // Success
-                self?.loggedIn = true
-            }
-        }
-    }
-    
-    func register(email: String, password: String) {
-        auth.createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                // Success
-                self?.loggedIn = true
-            }
-        }
-    }
-    
-    func logOut() {
-        try? auth.signOut()
-        
-        self.loggedIn = false
-    }
-}
 
+//
+// MARK: Cuenta de Usuario (Iniciar Sesion / Crear Cuenta)
+//
 
 struct AccountView: View {
     
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
     @State var isLoggingIn = true
     
@@ -66,7 +23,7 @@ struct AccountView: View {
     var body: some View {
         
         ZStack {
-            AccountBackground(isLoggingIn: $isLoggingIn)
+            AccountViewBackground(isLoggingIn: $isLoggingIn)
             
             DataView(isLoggingIn: $isLoggingIn).animation(.spring())
             
@@ -83,16 +40,14 @@ struct AccountView: View {
     }
 }
 
-/*
- struct AccountView_Previews: PreviewProvider {
- static var previews: some View {
- AccountBackground()
- }
- }*/
+
+//
+// MARK: Formulario de Datos
+//
 
 struct DataView: View {
     
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
     @Binding var isLoggingIn: Bool
     
@@ -103,18 +58,21 @@ struct DataView: View {
         } else {
             RegisterData().offset(y: 200)
         }
-        
     }
 }
 
-struct AccountBackground: View {
+
+//
+// MARK: Fondo de la View Cuenta de Usuario
+//
+
+struct AccountViewBackground: View {
     
     @Binding var isLoggingIn: Bool
     
     var body: some View {
         VStack {
             HStack {
-                
                 ZStack {
                     Ellipse()
                         .fill(isLoggingIn ? Color(#colorLiteral(red: 0.1829789287, green: 0.2423677345, blue: 1, alpha: 1)) : Color(#colorLiteral(red: 0.1725224555, green: 0.489376545, blue: 0.9920024276, alpha: 1)))
@@ -123,11 +81,7 @@ struct AccountBackground: View {
                         .ignoresSafeArea()
                         .offset(x: 70, y: -175)
                     
-                    Button(action: {
-                        
-                        isLoggingIn = true
-                        
-                    }, label: {
+                    Button(action: { isLoggingIn = true }, label: {
                         ZStack {
                             Text("Log In")
                                 .font(.title)
@@ -147,9 +101,7 @@ struct AccountBackground: View {
                         .ignoresSafeArea()
                         .offset(x: -70, y: -175)
                     
-                    Button(action: {
-                        isLoggingIn = false
-                    }, label: {
+                    Button(action: { isLoggingIn = false }, label: {
                         Text("Register")
                             .font(.title)
                             .fontWeight(.heavy)
@@ -158,7 +110,6 @@ struct AccountBackground: View {
                             .frame(width: 415, height: 225)
                         
                     }).offset(x: -150, y: 60)
-                    
                 }
             }.ignoresSafeArea()
             
@@ -192,9 +143,13 @@ struct AccountBackground: View {
         }.frame(maxWidth: 834, maxHeight: 1194)
         .background(Color(#colorLiteral(red: 0.9920526147, green: 0.992218554, blue: 0.9920293689, alpha: 1)))
         .ignoresSafeArea()
-        
     }
 }
+
+
+//
+// MARK: Crear Cuenta (Datos)
+//
 
 struct RegisterData: View {
     
@@ -203,7 +158,7 @@ struct RegisterData: View {
     @State var confirmPassword = ""
     @State var nickname = ""
     
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
     var body: some View {
         VStack(spacing: 65) {
@@ -215,18 +170,15 @@ struct RegisterData: View {
                 SeccionDatos(titulo: "Password", contenido: $password, isPassword: true)
                 
                 SeccionDatos(titulo: "Confirm Password", contenido: $confirmPassword, isPassword: true)
-                
             }
+            
             Button(action: {
                 
-                guard !email.isEmpty, !password.isEmpty, password == confirmPassword else {
+                guard !nickname.isEmpty, !email.isEmpty, !password.isEmpty, password == confirmPassword else {
                     return
                 }
                 
-                viewModel.register(email: email, password: password)
-                
-                /*viewModel.db.collection("usuarios").document(email).setData([
-                 "Nickname": ""])*/
+                firebaseViewModel.register(email: email, password: password, nickname: nickname)
                 
             }, label: {
                 Text("Register")
@@ -238,18 +190,21 @@ struct RegisterData: View {
                             .clipShape(EsquinasRedondeadas(esquinas: .allCorners, radio: 30))
                     )
             })
-            
-            
         }
     }
 }
+
+
+//
+// MARK: Iniciar Sesion (Datos)
+//
 
 struct LogInData: View {
     
     @State var email = ""
     @State var password = ""
     
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
     var body: some View {
         VStack(spacing: 65) {
@@ -258,12 +213,13 @@ struct LogInData: View {
                 
                 SeccionDatos(titulo: "Password", contenido: $password, isPassword: true)
             }
+            
             Button(action: {
                 guard !email.isEmpty, !password.isEmpty else {
                     return
                 }
                 
-                viewModel.logIn(email: email, password: password)
+                firebaseViewModel.logIn(email: email, password: password)
                 
             }, label: {
                 Text("Log In")
@@ -275,41 +231,6 @@ struct LogInData: View {
                             .clipShape(EsquinasRedondeadas(esquinas: .allCorners, radio: 30))
                     )
             })
-        }
-    }
-}
-
-struct SeccionDatos: View {
-    
-    var titulo: String!
-    @Binding var contenido: String
-    var isPassword: Bool!
-    
-    @EnvironmentObject var viewModel: AppViewModel
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            
-            Text(titulo)
-                .font(.custom("NewAcademy", size: 24))
-            
-            if isPassword {
-                SecureField("Type here...", text: $contenido)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .frame(width: 750, height: 20)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(12)
-            } else {
-                TextField("Type here...", text: $contenido)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .frame(width: 750, height: 20)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(12)
-            }
         }
     }
 }

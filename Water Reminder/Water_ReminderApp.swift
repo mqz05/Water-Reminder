@@ -10,8 +10,9 @@ import Firebase
 
 @main
 struct Water_ReminderApp: App {
-    /*
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate*/
+    
+    @StateObject var firebaseViewModel = FirebaseViewModel()
+    @StateObject var waveViewModel = WaveViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -19,18 +20,12 @@ struct Water_ReminderApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let viewModel = AppViewModel()
             MainView()
-                .environmentObject(viewModel)
+                .environmentObject(firebaseViewModel)
+                .environmentObject(waveViewModel)
+                .onAppear {
+                    firebaseViewModel.loggedIn = firebaseViewModel.isLogedIn
+                }
         }
     }
 }
-/*
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        FirebaseApp.configure()
-         
-        return true
-    }
-}*/

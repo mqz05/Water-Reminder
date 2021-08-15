@@ -1,15 +1,20 @@
 //
-//  SectionView.swift
+//  SectionMode.swift
 //  Water Reminder
 //
-//  Created by Mu qi Zhang on 06/03/2021.
+//  Created by Mu qi Zhang on 9/8/21.
 //
 
 import SwiftUI
 
+
+//
+// MARK: Seccion del Menu
+//
+
 struct SectionView: View {
     
-    var section: MenuSectionsViewsModel
+    var section: MenuModesData
     @Binding var modoSeleccionado: String
     
     var body: some View {
@@ -21,7 +26,5 @@ struct SectionView: View {
             Text(section.sectionName)
                 .fontWeight(.semibold)
         }
-        
     }
 }
-

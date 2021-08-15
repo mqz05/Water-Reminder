@@ -7,9 +7,14 @@
 
 import Foundation
 
-enum MenuSectionsViewsModel: Int, CaseIterable {
+
+//
+// MARK: Modos del Menu (Modelo)
+//
+
+enum MenuModesData: Int, CaseIterable {
     case dailyMode
-    case freeMode
+    case waterCalculator
     case drinkRest
     case statistics
     case settings
@@ -17,7 +22,7 @@ enum MenuSectionsViewsModel: Int, CaseIterable {
     var sectionName: String {
         switch self {
         case .dailyMode: return "Daily Mode"
-        case .freeMode: return "Free Mode"
+        case .waterCalculator: return "Water Calculator"
         case .drinkRest: return "Drink & Rest"
         case .statistics: return "Statistics"
         case .settings: return "Settings"
@@ -27,7 +32,7 @@ enum MenuSectionsViewsModel: Int, CaseIterable {
     var imageName: String {
         switch self {
         case .dailyMode: return "calendar.circle"
-        case .freeMode: return "questionmark.square.dashed"
+        case .waterCalculator: return "questionmark.square.dashed"
         case .drinkRest: return "pause.circle"
         case .statistics: return "arrow.up.arrow.down.circle"
         case .settings: return "Settings Icon"
