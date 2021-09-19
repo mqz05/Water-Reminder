@@ -11,8 +11,19 @@
 		7D3305887A190BE69BB10F4F /* Pods_Water_Reminder_Water_ReminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E14C19340F5E19BD69D4A7 /* Pods_Water_Reminder_Water_ReminderUITests.framework */; };
 		BC553063DC6D963C26352425 /* Pods_Water_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA6022EF89B742AA9339C56 /* Pods_Water_Reminder.framework */; };
 		CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04B4F825F3A7A600F64F6D /* MainView.swift */; };
+		CA0BBFAD26CB040B006E5263 /* DaggerSquare.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0BBFAC26CB040B006E5263 /* DaggerSquare.otf */; };
+		CA0BBFB626CE8774006E5263 /* DailyModeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BBFB526CE8774006E5263 /* DailyModeTitle.swift */; };
+		CA0BBFCE26CEC1A1006E5263 /* AddDrinkQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BBFCD26CEC1A1006E5263 /* AddDrinkQuantity.swift */; };
 		CA2195412673FEC9004340B3 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2195402673FEC9004340B3 /* DrinksModel.swift */; };
 		CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605D25F3F56100EB4E32 /* MenuView.swift */; };
+		CA2A3FA226F7AA1700E3AE74 /* WaterCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3FA126F7AA1700E3AE74 /* WaterCalculatorModel.swift */; };
+		CA2A3FAB26F7AC1700E3AE74 /* CustomSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3FAA26F7AC1700E3AE74 /* CustomSelector.swift */; };
+		CA2A3FB026F7ACDC00E3AE74 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3FAF26F7ACDC00E3AE74 /* CustomPicker.swift */; };
+		CA2A3FB526F7AD3800E3AE74 /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3FB426F7AD3800E3AE74 /* CustomStepper.swift */; };
+		CA3553E826CFDC640088D67C /* DrinksCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3553E726CFDC640088D67C /* DrinksCarousel.swift */; };
+		CA42174D26D90F1100AA77C0 /* DataInputWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42174C26D90F1100AA77C0 /* DataInputWaterCalculator.swift */; };
+		CA42175526D90F2600AA77C0 /* CalculateButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42175426D90F2600AA77C0 /* CalculateButtons.swift */; };
+		CA42175A26D90F3200AA77C0 /* TotalWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42175926D90F3200AA77C0 /* TotalWater.swift */; };
 		CA475B6625F50722000535D0 /* MenuModesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6525F50722000535D0 /* MenuModesModel.swift */; };
 		CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B6E25F50B75000535D0 /* DailyModeView.swift */; };
 		CA475B7425F50B81000535D0 /* WaterCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA475B7325F50B81000535D0 /* WaterCalculatorView.swift */; };
@@ -24,22 +35,20 @@
 		CA54790926C3EFC100744C3F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54790826C3EFC100744C3F /* ProgressBar.swift */; };
 		CA56718F26A04CB000B9504B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56718E26A04CB000B9504B /* AccountView.swift */; };
 		CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */; };
+		CA89494A26C9CA9D003FFACA /* DailyModePhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89494926C9CA9D003FFACA /* DailyModePhases.swift */; };
 		CA8A563926C7062300AE2D90 /* WavesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A563826C7062300AE2D90 /* WavesCollection.swift */; };
 		CA8A564126C7065400AE2D90 /* WavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A564026C7065400AE2D90 /* WavesViewModel.swift */; };
 		CA8A564626C7068500AE2D90 /* WavesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A564526C7068500AE2D90 /* WavesModel.swift */; };
 		CA8A565B26C7087000AE2D90 /* BubbleCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A565A26C7087000AE2D90 /* BubbleCollectionViewModel.swift */; };
 		CA8A566026C708D300AE2D90 /* BubbleModelAndViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A565F26C708D300AE2D90 /* BubbleModelAndViewModel.swift */; };
 		CA8A566826C708E900AE2D90 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A566726C708E900AE2D90 /* Bubble.swift */; };
+		CA960B5126E7F3B2006D5136 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA960B5026E7F3B2006D5136 /* Colors.xcassets */; };
 		CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */; };
 		CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */; };
 		CABA84C126BDD17A003B38AA /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84C026BDD17A003B38AA /* SelectButton.swift */; };
-		CABA84C726BDD2AE003B38AA /* AddQuantityButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84C626BDD2AE003B38AA /* AddQuantityButtons.swift */; };
-		CABA84CD26BDD339003B38AA /* DailyWaterAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84CC26BDD339003B38AA /* DailyWaterAmount.swift */; };
+		CABA84C726BDD2AE003B38AA /* QuantityButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84C626BDD2AE003B38AA /* QuantityButtons.swift */; };
 		CABA84D326BDD404003B38AA /* AddWaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84D226BDD404003B38AA /* AddWaterButton.swift */; };
-		CABA84DC26C06E26003B38AA /* Display Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84DB26C06E26003B38AA /* Display Drinks.swift */; };
-		CABA84E826C06F31003B38AA /* DrinksButtonsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84E726C06F31003B38AA /* DrinksButtonsScrollView.swift */; };
 		CABA84ED26C06FCD003B38AA /* DrinksButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84EC26C06FCD003B38AA /* DrinksButtons.swift */; };
-		CABA84FB26C07759003B38AA /* DrinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84FA26C07759003B38AA /* DrinksViewModel.swift */; };
 		CABA850426C1C0C9003B38AA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA850326C1C0C9003B38AA /* Profile.swift */; };
 		CABA850926C1C103003B38AA /* MenuModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA850826C1C103003B38AA /* MenuModes.swift */; };
 		CABA850F26C1C1A7003B38AA /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA850E26C1C1A7003B38AA /* MenuSection.swift */; };
@@ -77,8 +86,19 @@
 		B93406ADDF341CB85601591D /* Pods_Water_ReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_ReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE85689672B49F0FBF5E8F4 /* Pods-Water Reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Reminder.release.xcconfig"; path = "Target Support Files/Pods-Water Reminder/Pods-Water Reminder.release.xcconfig"; sourceTree = "<group>"; };
 		CA04B4F825F3A7A600F64F6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CA0BBFAC26CB040B006E5263 /* DaggerSquare.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaggerSquare.otf; sourceTree = "<group>"; };
+		CA0BBFB526CE8774006E5263 /* DailyModeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModeTitle.swift; sourceTree = "<group>"; };
+		CA0BBFCD26CEC1A1006E5263 /* AddDrinkQuantity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkQuantity.swift; sourceTree = "<group>"; };
 		CA2195402673FEC9004340B3 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
 		CA22605D25F3F56100EB4E32 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CA2A3FA126F7AA1700E3AE74 /* WaterCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculatorModel.swift; sourceTree = "<group>"; };
+		CA2A3FAA26F7AC1700E3AE74 /* CustomSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelector.swift; sourceTree = "<group>"; };
+		CA2A3FAF26F7ACDC00E3AE74 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		CA2A3FB426F7AD3800E3AE74 /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
+		CA3553E726CFDC640088D67C /* DrinksCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCarousel.swift; sourceTree = "<group>"; };
+		CA42174C26D90F1100AA77C0 /* DataInputWaterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputWaterCalculator.swift; sourceTree = "<group>"; };
+		CA42175426D90F2600AA77C0 /* CalculateButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculateButtons.swift; path = "/Users/muqi/Desktop/Water Reminder (Todo)/Water Reminder/Water Reminder/Views/Modes and Settings/Water Calculator/Calculate Buttons/CalculateButtons.swift"; sourceTree = "<absolute>"; };
+		CA42175926D90F3200AA77C0 /* TotalWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TotalWater.swift; path = "Water Reminder/Views/Modes and Settings/Water Calculator/Total Water/TotalWater.swift"; sourceTree = SOURCE_ROOT; };
 		CA475B6525F50722000535D0 /* MenuModesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModesModel.swift; sourceTree = "<group>"; };
 		CA475B6E25F50B75000535D0 /* DailyModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModeView.swift; sourceTree = "<group>"; };
 		CA475B7325F50B81000535D0 /* WaterCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculatorView.swift; sourceTree = "<group>"; };
@@ -90,22 +110,20 @@
 		CA54790826C3EFC100744C3F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		CA56718E26A04CB000B9504B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasPersonalizadas.swift; sourceTree = "<group>"; };
+		CA89494926C9CA9D003FFACA /* DailyModePhases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModePhases.swift; sourceTree = "<group>"; };
 		CA8A563826C7062300AE2D90 /* WavesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesCollection.swift; sourceTree = "<group>"; };
 		CA8A564026C7065400AE2D90 /* WavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesViewModel.swift; sourceTree = "<group>"; };
 		CA8A564526C7068500AE2D90 /* WavesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesModel.swift; sourceTree = "<group>"; };
 		CA8A565A26C7087000AE2D90 /* BubbleCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewModel.swift; sourceTree = "<group>"; };
 		CA8A565F26C708D300AE2D90 /* BubbleModelAndViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModelAndViewModel.swift; sourceTree = "<group>"; };
 		CA8A566726C708E900AE2D90 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		CA960B5026E7F3B2006D5136 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewAcademy.ttf; sourceTree = "<group>"; };
 		CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CABA84C026BDD17A003B38AA /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
-		CABA84C626BDD2AE003B38AA /* AddQuantityButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuantityButtons.swift; sourceTree = "<group>"; };
-		CABA84CC26BDD339003B38AA /* DailyWaterAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterAmount.swift; sourceTree = "<group>"; };
+		CABA84C626BDD2AE003B38AA /* QuantityButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityButtons.swift; sourceTree = "<group>"; };
 		CABA84D226BDD404003B38AA /* AddWaterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaterButton.swift; sourceTree = "<group>"; };
-		CABA84DB26C06E26003B38AA /* Display Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Display Drinks.swift"; sourceTree = "<group>"; };
-		CABA84E726C06F31003B38AA /* DrinksButtonsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksButtonsScrollView.swift; sourceTree = "<group>"; };
 		CABA84EC26C06FCD003B38AA /* DrinksButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksButtons.swift; sourceTree = "<group>"; };
-		CABA84FA26C07759003B38AA /* DrinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModel.swift; sourceTree = "<group>"; };
 		CABA850326C1C0C9003B38AA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CABA850826C1C103003B38AA /* MenuModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModes.swift; sourceTree = "<group>"; };
 		CABA850E26C1C1A7003B38AA /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
@@ -178,6 +196,59 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA0BBFB426CE8756006E5263 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				CA0BBFB526CE8774006E5263 /* DailyModeTitle.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		CA0BBFC626CEC037006E5263 /* Add Quantity View */ = {
+			isa = PBXGroup;
+			children = (
+				CA0BBFCD26CEC1A1006E5263 /* AddDrinkQuantity.swift */,
+				CABA84C526BDD278003B38AA /* Amount to Add & Quantity Buttons */,
+				CABA84D126BDD3BC003B38AA /* Add Water Button */,
+			);
+			path = "Add Quantity View";
+			sourceTree = "<group>";
+		};
+		CA2A3FA926F7ABE300E3AE74 /* Custom Data Input Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA2A3FAA26F7AC1700E3AE74 /* CustomSelector.swift */,
+				CA2A3FAF26F7ACDC00E3AE74 /* CustomPicker.swift */,
+				CA2A3FB426F7AD3800E3AE74 /* CustomStepper.swift */,
+			);
+			path = "Custom Data Input Views";
+			sourceTree = "<group>";
+		};
+		CA42174926D90EB600AA77C0 /* Data Input Water Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				CA42174C26D90F1100AA77C0 /* DataInputWaterCalculator.swift */,
+				CA2A3FA926F7ABE300E3AE74 /* Custom Data Input Views */,
+			);
+			path = "Data Input Water Calculator";
+			sourceTree = "<group>";
+		};
+		CA42174A26D90ED800AA77C0 /* Calculate Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CA42175426D90F2600AA77C0 /* CalculateButtons.swift */,
+			);
+			path = "Calculate Buttons";
+			sourceTree = "<group>";
+		};
+		CA42174B26D90EF200AA77C0 /* Total Water */ = {
+			isa = PBXGroup;
+			children = (
+				CA42175926D90F3200AA77C0 /* TotalWater.swift */,
+			);
+			path = "Total Water";
+			sourceTree = "<group>";
+		};
 		CA475B6D25F50B5D000535D0 /* Modes and Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +301,15 @@
 			path = Bubble;
 			sourceTree = "<group>";
 		};
+		CA960B4F26E7F385006D5136 /* Assets & Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
+				CA960B5026E7F3B2006D5136 /* Colors.xcassets */,
+			);
+			path = "Assets & Colors";
+			sourceTree = "<group>";
+		};
 		CABA84B226BDC847003B38AA /* Main Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,13 +332,13 @@
 		CABA84B426BDC87A003B38AA /* Daily Mode */ = {
 			isa = PBXGroup;
 			children = (
+				CA89494926C9CA9D003FFACA /* DailyModePhases.swift */,
 				CA475B6E25F50B75000535D0 /* DailyModeView.swift */,
+				CA0BBFB426CE8756006E5263 /* Title */,
 				CA54790726C3EF9C00744C3F /* Progress Bar */,
 				CABA84B926BDCD75003B38AA /* Select Drinks Button */,
-				CABA84C526BDD278003B38AA /* Add Quantity Buttons */,
-				CABA84CB26BDD2EE003B38AA /* Daily Water Amount */,
-				CABA84D126BDD3BC003B38AA /* Add Water Button */,
-				CABA84DA26C06DE9003B38AA /* Display Drinks */,
+				CABA84DA26C06DE9003B38AA /* Drinks Scroll View */,
+				CA0BBFC626CEC037006E5263 /* Add Quantity View */,
 			);
 			path = "Daily Mode";
 			sourceTree = "<group>";
@@ -266,7 +346,11 @@
 		CABA84B526BDC888003B38AA /* Water Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CA2A3FA126F7AA1700E3AE74 /* WaterCalculatorModel.swift */,
 				CA475B7325F50B81000535D0 /* WaterCalculatorView.swift */,
+				CA42174926D90EB600AA77C0 /* Data Input Water Calculator */,
+				CA42174A26D90ED800AA77C0 /* Calculate Buttons */,
+				CA42174B26D90EF200AA77C0 /* Total Water */,
 			);
 			path = "Water Calculator";
 			sourceTree = "<group>";
@@ -279,20 +363,12 @@
 			path = "Select Drinks Button";
 			sourceTree = "<group>";
 		};
-		CABA84C526BDD278003B38AA /* Add Quantity Buttons */ = {
+		CABA84C526BDD278003B38AA /* Amount to Add & Quantity Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				CABA84C626BDD2AE003B38AA /* AddQuantityButtons.swift */,
+				CABA84C626BDD2AE003B38AA /* QuantityButtons.swift */,
 			);
-			path = "Add Quantity Buttons";
-			sourceTree = "<group>";
-		};
-		CABA84CB26BDD2EE003B38AA /* Daily Water Amount */ = {
-			isa = PBXGroup;
-			children = (
-				CABA84CC26BDD339003B38AA /* DailyWaterAmount.swift */,
-			);
-			path = "Daily Water Amount";
+			path = "Amount to Add & Quantity Buttons";
 			sourceTree = "<group>";
 		};
 		CABA84D126BDD3BC003B38AA /* Add Water Button */ = {
@@ -303,24 +379,14 @@
 			path = "Add Water Button";
 			sourceTree = "<group>";
 		};
-		CABA84DA26C06DE9003B38AA /* Display Drinks */ = {
-			isa = PBXGroup;
-			children = (
-				CABA84DB26C06E26003B38AA /* Display Drinks.swift */,
-				CABA84E626C06EF4003B38AA /* Drinks Buttons Scroll View */,
-			);
-			path = "Display Drinks";
-			sourceTree = "<group>";
-		};
-		CABA84E626C06EF4003B38AA /* Drinks Buttons Scroll View */ = {
+		CABA84DA26C06DE9003B38AA /* Drinks Scroll View */ = {
 			isa = PBXGroup;
 			children = (
 				CA2195402673FEC9004340B3 /* DrinksModel.swift */,
-				CABA84E726C06F31003B38AA /* DrinksButtonsScrollView.swift */,
+				CA3553E726CFDC640088D67C /* DrinksCarousel.swift */,
 				CABA84FF26C07788003B38AA /* Drinks Buttons */,
-				CABA84FA26C07759003B38AA /* DrinksViewModel.swift */,
 			);
-			path = "Drinks Buttons Scroll View";
+			path = "Drinks Scroll View";
 			sourceTree = "<group>";
 		};
 		CABA84F526C07567003B38AA /* Utilities */ = {
@@ -344,6 +410,7 @@
 		CABA84F726C0761F003B38AA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CA0BBFAC26CB040B006E5263 /* DaggerSquare.otf */,
 				CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */,
 			);
 			path = Fonts;
@@ -471,7 +538,7 @@
 				CABA852D26C1E2F0003B38AA /* Views */,
 				CABA84F526C07567003B38AA /* Utilities */,
 				CABA84F626C075DB003B38AA /* Supporting Files */,
-				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
+				CA960B4F26E7F385006D5136 /* Assets & Colors */,
 				CAD71A4625F2B35C0041733A /* Preview Content */,
 			);
 			path = "Water Reminder";
@@ -620,8 +687,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0BBFAD26CB040B006E5263 /* DaggerSquare.otf in Resources */,
 				CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */,
 				CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */,
+				CA960B5126E7F3B2006D5136 /* Colors.xcassets in Resources */,
 				CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */,
 				CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */,
 			);
@@ -756,34 +825,41 @@
 				CA52C02726A4DC300055077A /* FirebaseViewModel.swift in Sources */,
 				CA475B7425F50B81000535D0 /* WaterCalculatorView.swift in Sources */,
 				CA8A564626C7068500AE2D90 /* WavesModel.swift in Sources */,
-				CABA84FB26C07759003B38AA /* DrinksViewModel.swift in Sources */,
-				CABA84DC26C06E26003B38AA /* Display Drinks.swift in Sources */,
 				CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */,
 				CABA84D326BDD404003B38AA /* AddWaterButton.swift in Sources */,
 				CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */,
 				CA54790926C3EFC100744C3F /* ProgressBar.swift in Sources */,
+				CA2A3FB026F7ACDC00E3AE74 /* CustomPicker.swift in Sources */,
 				CA8A566826C708E900AE2D90 /* Bubble.swift in Sources */,
 				CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */,
-				CABA84E826C06F31003B38AA /* DrinksButtonsScrollView.swift in Sources */,
 				CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */,
 				CA2195412673FEC9004340B3 /* DrinksModel.swift in Sources */,
 				CA475B8325F50BAC000535D0 /* SettingsView.swift in Sources */,
+				CA0BBFB626CE8774006E5263 /* DailyModeTitle.swift in Sources */,
 				CABA853226C1E4E2003B38AA /* UserModel.swift in Sources */,
 				CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */,
+				CA0BBFCE26CEC1A1006E5263 /* AddDrinkQuantity.swift in Sources */,
+				CA2A3FA226F7AA1700E3AE74 /* WaterCalculatorModel.swift in Sources */,
 				CA8A564126C7065400AE2D90 /* WavesViewModel.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
+				CA42175526D90F2600AA77C0 /* CalculateButtons.swift in Sources */,
 				CABA850F26C1C1A7003B38AA /* MenuSection.swift in Sources */,
-				CABA84C726BDD2AE003B38AA /* AddQuantityButtons.swift in Sources */,
+				CABA84C726BDD2AE003B38AA /* QuantityButtons.swift in Sources */,
 				CA475B7925F50B91000535D0 /* DrinkAndRestView.swift in Sources */,
+				CA3553E826CFDC640088D67C /* DrinksCarousel.swift in Sources */,
+				CA2A3FAB26F7AC1700E3AE74 /* CustomSelector.swift in Sources */,
 				CABA850926C1C103003B38AA /* MenuModes.swift in Sources */,
 				CA56718F26A04CB000B9504B /* AccountView.swift in Sources */,
 				CA4FADE726C59BDC00FBD8E8 /* BubbleCollection.swift in Sources */,
-				CABA84CD26BDD339003B38AA /* DailyWaterAmount.swift in Sources */,
+				CA42175A26D90F3200AA77C0 /* TotalWater.swift in Sources */,
 				CA475B6625F50722000535D0 /* MenuModesModel.swift in Sources */,
 				CABA850426C1C0C9003B38AA /* Profile.swift in Sources */,
 				CABA84C126BDD17A003B38AA /* SelectButton.swift in Sources */,
+				CA42174D26D90F1100AA77C0 /* DataInputWaterCalculator.swift in Sources */,
 				CABA84ED26C06FCD003B38AA /* DrinksButtons.swift in Sources */,
+				CA2A3FB526F7AD3800E3AE74 /* CustomStepper.swift in Sources */,
 				CA8A563926C7062300AE2D90 /* WavesCollection.swift in Sources */,
+				CA89494A26C9CA9D003FFACA /* DailyModePhases.swift in Sources */,
 				CABA851426C1C2F5003B38AA /* ManageAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

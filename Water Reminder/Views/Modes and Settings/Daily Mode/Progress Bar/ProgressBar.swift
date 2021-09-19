@@ -22,7 +22,6 @@ struct ProgressBar: View {
                 .frame(width: 600, height: 600)
                 .overlay(
                     ZStack {
-                        
                         WavesCollection()
                         
                         BubbleCollection()
@@ -30,12 +29,20 @@ struct ProgressBar: View {
                     }.clipShape(Circle().scale(0.97))
                 )
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {waveViewModel.updateWaveMotion()})
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {waveViewModel.updateWaveMotion()})
                 }
             
-            Text(String(format: "%.0f", firebaseViewModel.porcentaje) + "%")
-                .font(.custom("NewAcademy", size: 64))
-                .foregroundColor(Color(#colorLiteral(red: 0.09385982901, green: 0.1059651747, blue: 0.5198106766, alpha: 1)))
+            VStack(spacing: 5) {
+                Text(String(format: "%.0f", firebaseViewModel.porcentaje) + "%")
+                    .font(.custom("NewAcademy", size: 64))
+                    .foregroundColor(Color(#colorLiteral(red: 0.09385982901, green: 0.1059651747, blue: 0.5198106766, alpha: 1)))
+                
+                Text("\(firebaseViewModel.userData.dailyWaterAmount) ml / \(firebaseViewModel.userData.dailyWaterObjective) ml")
+                    .font(.custom("NewAcademy", size: 24))
+                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    .opacity(0.85)
+                
+            }.offset(y: 10)
         }
     }
 }

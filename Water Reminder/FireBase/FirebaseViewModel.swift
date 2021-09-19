@@ -26,9 +26,9 @@ class FirebaseViewModel: ObservableObject {
     // User Info
     @Published var userEmail = Auth.auth().currentUser?.email
     
-    @Published var userData: User
+    @Published var userData: User = User(nickname: "Default", level: "Default", points: 0, dailyWaterAmount: 0, dailyWaterObjective: 2000)
     
-    @Published var waterAmountToAdd: Int = 0
+    @Published var drinkAmountToAdd: Int = 0
     
     @Published var porcentaje: CGFloat = 0
     
@@ -53,10 +53,12 @@ class FirebaseViewModel: ObservableObject {
     
     // Init
     init() {
-        userData = User(nickname: "Default", level: "Default", points: 0, dailyWaterAmount: 0, dailyWaterObjective: 2000)
         self.fetchDate()
         self.fetchUserProfile()
-        self.fetchUserData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.fetchUserData()
+        })
+        
     }
     
     
@@ -96,7 +98,7 @@ class FirebaseViewModel: ObservableObject {
                                                                     "Nickname": nickname,
                                                                     "Level": "Beginner",
                                                                     "Points": 0,
-                                                                    "Daily Water Objective": 2000
+                                                                    "Daily_Water_Objective": 2000
                                                                     ])
                 self?.fetchUserProfile()
                 self?.fetchUserData()
@@ -112,7 +114,7 @@ class FirebaseViewModel: ObservableObject {
         
         userData = User(nickname: "Default", level: "Default", points: 0, dailyWaterAmount: 0, dailyWaterObjective: 2000)
         self.porcentaje = 0
-        self.waterAmountToAdd = 0
+        self.drinkAmountToAdd = 0
         
         self.loggedIn = false
     }
@@ -142,6 +144,7 @@ class FirebaseViewModel: ObservableObject {
                     self.userData.nickname = data["Nickname"] as? String ?? ""
                     self.userData.level = data["Level"] as? String ?? ""
                     self.userData.points = data["Points"] as? Int ?? 0
+                    self.userData.dailyWaterObjective = data["Daily_Water_Objective"] as? Int ?? 0
                 }
             }
         })
@@ -182,6 +185,7 @@ class FirebaseViewModel: ObservableObject {
                 ])
                 
                 withAnimation(.linear(duration: 2)) {
+                    self.userData.dailyWaterAmount = 0
                     self.porcentaje = CGFloat(self.userData.dailyWaterAmount * 100 / self.userData.dailyWaterObjective)
                 }
             }
@@ -222,11 +226,39 @@ class FirebaseViewModel: ObservableObject {
     }
     
     
+    
+    func setWaterObjective() {
+        
+        // Check if Logged In
+        guard isLogedIn == true else {
+            return
+        }
+        
+        
+        // Update Water Objective
+        db.collection("usuarios").document(userEmail ?? "").getDocument(completion: { document, error in
+            
+            guard error == nil else {
+                print("error", error ?? "")
+                return
+            }
+            
+            if let document = document, document.exists {
+                
+                self.db.collection("usuarios").document(self.userEmail ?? "").updateData([
+                    "Daily_Water_Objective" : self.userData.dailyWaterObjective
+                ])
+            }
+        })
+    }
+    
+    
+    
     func addWaterAmountToTotal()  {
         withAnimation(.linear(duration: 2)) {
-            self.userData.dailyWaterAmount += self.waterAmountToAdd
+            self.userData.dailyWaterAmount += self.drinkAmountToAdd
             self.porcentaje = CGFloat(self.userData.dailyWaterAmount * 100 / self.userData.dailyWaterObjective)
-            self.waterAmountToAdd = 0
+            self.drinkAmountToAdd = 0
         }
     }
 }

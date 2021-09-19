@@ -24,7 +24,7 @@ struct MainView: View {
     
     @State var modo: MenuModesData = .dailyMode
     
-    @State var home = HomeView(firstView: AnyView(DailyModeView()))
+    @State var home: HomeView = HomeView(firstView: AnyView(Color.white))
     
     var body: some View {
         
@@ -38,11 +38,15 @@ struct MainView: View {
                 
                 if isShowingMenu == true {
                     MiniReturnHomeLayer(isShowingMenu: $isShowingMenu)
-                        .cornerRadius(20)
-                        .offset(x: 399, y: 94)
-                        .scaleEffect(x: 0.7, y: 0.83)
+                        .frame(width: 834, height: 1194)
+                        .cornerRadius(isShowingMenu ? 20 : 10)
+                        .offset(x: isShowingMenu ? 400 : 0, y: isShowingMenu ? 25 : 0)
+                        .scaleEffect(x: isShowingMenu ? 0.82 : 1, y: isShowingMenu ? 0.82 : 1)
+                        
                         .opacity(0.1)
                 }
+            }.onAppear {
+                home = HomeView(firstView: AnyView(DailyModeView(isShowingMenu: $isShowingMenu)))
             }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
@@ -80,22 +84,25 @@ struct SetUpHomeView: View {
         ZStack {
             Color.white
                 .opacity(0.4)
+                .frame(width: 834, height: 1194)
                 .cornerRadius(isShowingMenu ? 20 : 10)
                 .offset(x: isShowingMenu ? 275 : 0, y:  isShowingMenu ? 30 : 0)
-                .scaleEffect(x: isShowingMenu ? 0.48 : 1, y: isShowingMenu ? 0.775 : 1)
+                .scaleEffect(x: isShowingMenu ? 0.48 : 1, y: isShowingMenu ? 0.7 : 1)
                 .shadow(color: Color.black.opacity(0.07), radius: 5, x: -5, y: 0)
             
             Color.white
                 .opacity(0.5)
+                .frame(width: 834, height: 1194)
                 .cornerRadius(isShowingMenu ? 20 : 10)
                 .offset(x: isShowingMenu ? 350 : 0, y:  isShowingMenu ? 30 : 0)
-                .scaleEffect(x: isShowingMenu ? 0.65 : 1, y: isShowingMenu ? 0.825: 1)
+                .scaleEffect(x: isShowingMenu ? 0.65 : 1, y: isShowingMenu ? 0.75 : 1)
                 .shadow(color: Color.black.opacity(0.07), radius: 5, x: -5, y: 0)
             
             home
+                .frame(width: 834, height: 1194)
                 .cornerRadius(isShowingMenu ? 20 : 10)
-                .offset(x: isShowingMenu ? 400 : 0, y:  isShowingMenu ? 100 : 0)
-                .scaleEffect(x: isShowingMenu ? 0.8 : 1, y: isShowingMenu ? 0.8 : 1)
+                .offset(x: isShowingMenu ? 400 : 0, y: isShowingMenu ? 90 : 0)
+                .scaleEffect(x: isShowingMenu ? 0.82 : 1, y: isShowingMenu ? 0.82 : 1)
                 .shadow(color: Color.white, radius: isShowingMenu ? 7.5 : 0)
                 .navigationBarItems(leading: Button(action: {
                     withAnimation(.spring(), {

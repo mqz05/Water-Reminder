@@ -49,3 +49,33 @@ struct MenuModes: View {
         .padding(.leading, -10)
     }
 }
+
+
+// FUNCION: Cambio a la vista seleccionada
+
+func findSelectedView(sectionName: String, isShowingMenu: Binding<Bool>) -> AnyView {
+    if sectionName == "Daily Mode" {
+        modoSeleccionadoActual = "Daily Mode"
+        return AnyView(DailyModeView(isShowingMenu: isShowingMenu))
+        
+    } else if sectionName == "Water Calculator" {
+        modoSeleccionadoActual = "Water Calculator"
+        return AnyView(WaterCalculatorView())//AnyView(WaterCalculatorView())
+        
+    } else if sectionName == "Drink & Rest" {
+        modoSeleccionadoActual = "Drink & Rest"
+        return AnyView(DrinkAndRestView())
+        
+    } else if sectionName == "Statistics" {
+        modoSeleccionadoActual = "Statistics"
+        return AnyView(StatisticsView())
+        
+    } else if sectionName == "Settings" {
+        modoSeleccionadoActual = "Settings"
+        return AnyView(SettingsView())
+        
+    } else {
+        modoSeleccionadoActual = "Daily Mode"
+        return AnyView(DailyModeView(isShowingMenu: isShowingMenu))
+    }
+}

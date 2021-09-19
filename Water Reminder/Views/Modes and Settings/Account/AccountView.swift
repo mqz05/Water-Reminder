@@ -81,15 +81,12 @@ struct AccountViewBackground: View {
                         .ignoresSafeArea()
                         .offset(x: 70, y: -175)
                     
-                    Button(action: { isLoggingIn = true }, label: {
-                        ZStack {
-                            Text("Log In")
-                                .font(.title)
-                                .fontWeight(.heavy)
-                                .foregroundColor(.white)
-                                .scaleEffect(1.35)
-                                .frame(width: 415, height: 225)
-                        }
+                    Button(action: { isLoggingIn = true }, label: {                            Text("Log In")
+                        .font(.custom("DaggerSquare", size: 34))
+                        .foregroundColor(.white)
+                        .scaleEffect(1.35)
+                        .frame(width: 415, height: 225)
+                        
                     }).offset(x: 150, y: 60)
                 }
                 
@@ -103,8 +100,7 @@ struct AccountViewBackground: View {
                     
                     Button(action: { isLoggingIn = false }, label: {
                         Text("Register")
-                            .font(.title)
-                            .fontWeight(.heavy)
+                            .font(.custom("DaggerSquare", size: 34))
                             .foregroundColor(.white)
                             .scaleEffect(1.35)
                             .frame(width: 415, height: 225)

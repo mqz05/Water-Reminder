@@ -28,15 +28,19 @@ struct MenuView: View {
                 
                 Profile()
                 
-                MenuModes(home: $home, isShowingMenu: $isShowingMenu, modoSeleccionado: modoSeleccionadoActual).scaleEffect(1.3).padding(.top, 30)
+                MenuModes(home: $home, isShowingMenu: $isShowingMenu, modoSeleccionado: modoSeleccionadoActual)
+                    .scaleEffect(1.3)
+                    .padding(.top, 30)
+                    .padding(.leading, 10)
                 
                 Spacer()
                 
                 ManageAccount(showLogOutNotification: $showLogOutNotification)
+                    .padding(.bottom, 30)
                 
             }
             .padding(.leading, 25)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, maxHeight: 1100, alignment: .leading)
             .alert(isPresented: $showLogOutNotification, content: {
                 return Alert(title: Text("Succesfully logged out"), dismissButton: .cancel(Text("Return")))
             })
@@ -53,37 +57,3 @@ struct MenuView: View {
         }))
     }
 }
-
-
-
-// FUNCION: Cambio a la vista seleccionada
-
-func findSelectedView(sectionName: String, isShowingMenu: Binding<Bool>) -> AnyView {
-    if sectionName == "Daily Mode" {
-        modoSeleccionadoActual = "Daily Mode"
-        return AnyView(DailyModeView())
-        
-    } else if sectionName == "Water Calculator" {
-        modoSeleccionadoActual = "Water Calculator"
-        return AnyView(WaterCalculatorView())
-        
-    } else if sectionName == "Drink & Rest" {
-        modoSeleccionadoActual = "Drink & Rest"
-        return AnyView(DrinkAndRestView())
-        
-    } else if sectionName == "Statistics" {
-        modoSeleccionadoActual = "Statistics"
-        return AnyView(StatisticsView())
-        
-    } else if sectionName == "Settings" {
-        modoSeleccionadoActual = "Settings"
-        return AnyView(SettingsView())
-        
-    } else {
-        modoSeleccionadoActual = "Daily Mode"
-        return AnyView(DailyModeView())
-    }
-}
-
-
-

@@ -14,29 +14,23 @@ import SwiftUI
 
 struct SelectDrinksButton: View {
     
-    @Binding var isSelectingDrink: Bool
+    @Binding var estadoActual: DailyModePhases
     
     var body: some View {
-        VStack(spacing: 5) {
-            Text("Drinks")
-                .font(.title)
-                .fontWeight(.medium)
-                .foregroundColor(Color(#colorLiteral(red: 0.9992401004, green: 0.6269122958, blue: 0, alpha: 1)))
-            
-            Button(action: {
-                // Desplegar todas las bebidas (Selector de Bebida)
-                isSelectingDrink = true
-                
-            }, label: {
-                Image(systemName: "play.circle.fill")
-                    .resizable()
-                    .frame(maxWidth: 100, maxHeight: 100)
-                    .clipShape(Circle())
-                    .overlay(Circle()
-                        .stroke(Color(#colorLiteral(red: 0.9992401004, green: 0.6269122958, blue: 0, alpha: 1)), lineWidth: 6))
-                    .foregroundColor(Color.white)
+        Button(action: {
+            withAnimation(Animation.spring(), {
+                estadoActual = .selectDrink
             })
-        }
-        .padding(.bottom, 30.0)
+            
+        }, label: {
+            Text("Drink!")
+                .font(.custom("NewAcademy", size: 32))
+                .foregroundColor(Color(#colorLiteral(red: 0.1829789287, green: 0.2423677345, blue: 1, alpha: 1)))
+                .frame(width: 225, height: 70)
+                .background(
+                    Color.white
+                        .clipShape(EsquinasRedondeadas(esquinas: .allCorners, radio: 25))
+                )
+        })
     }
 }

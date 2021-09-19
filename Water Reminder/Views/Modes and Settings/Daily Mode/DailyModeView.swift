@@ -18,86 +18,52 @@ struct DailyModeView: View {
     
     @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
-    @State var isSelectingDrink: Bool = false
+    @State var estadoActual: DailyModePhases = .home
+    
+    @Binding var isShowingMenu: Bool
     
     var body: some View {
         ZStack {
             
             BackgroundView(topColor: Color(#colorLiteral(red: 0.4080183647, green: 0.6348306513, blue: 1, alpha: 1)), bottomColor: Color(#colorLiteral(red: 0.1829789287, green: 0.2423677345, blue: 1, alpha: 1)), isHorizontal: false)
             
-            VStack(spacing: 5) {
+            WaveBackground(graphWidth: 0.3, amplitude: 0.01).fill(Color(#colorLiteral(red: 0.434438613, green: 0.5581636017, blue: 1, alpha: 1))).offset(y: 220)
+            
+            VStack(spacing: 25) {
                 
-                Text("Daily Mode")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color(#colorLiteral(red: 0.7302836776, green: 0.401488483, blue: 0.9478703141, alpha: 1)))
-                    .padding(.top, 15)
+                DailyModeTitle()
                 
                 ProgressBar()
                 
-                SelectDrinksButton(isSelectingDrink: $isSelectingDrink)
-                    .allowsHitTesting(!isSelectingDrink)
-                
-                AddQuantityButtons()
-                    .allowsHitTesting(!isSelectingDrink)
-                
-                DailyWaterAmount()
-                
-                AddAndResetButtons()
-                    .allowsHitTesting(!isSelectingDrink)
+                ZStack {
+                    
+                    if estadoActual != .home {
+                        Button(action: {
+                            withAnimation(Animation.spring(), {
+                                estadoActual = .home
+                            })
+                        }, label: {
+                            Image(systemName: "chevron.backward.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(.white)
+                        })
+                        .offset(x: -355, y: 140)
+                    }
+                    
+                    if estadoActual == .home {
+                        SelectDrinksButton(estadoActual: $estadoActual)
+                            .offset(y: 10)
+                        
+                    } else if estadoActual == .selectDrink {
+                        DrinksCarousel(estadoActual: $estadoActual)
+                        
+                    } else if estadoActual == .selectQuantity {
+                        AddDrinkQuantity(estadoActual: $estadoActual)
+                    }
+                }
+                .frame(width: 834, height: 375)
             }
-            
-            //BarraDeProgreso()
-            
-            DisplayDrinks(isSelectingDrink: $isSelectingDrink)
         }
     }
 }
-
-
-
-/*
-//
-// MARK: Barra de Progreso
-//
-
-struct BarraDeProgreso: View {
-    
-    @EnvironmentObject var dailyModeViewModel: DailyModeViewModel
-    
-    var body: some View {
-        
-        ZStack() {
-            
-            Capsule().fill(Color.black.opacity(0.8))
-                .frame(width: 52, height: 702)
-            
-            ZStack(alignment: .bottom) {
-                Capsule().fill(Color(#colorLiteral(red: 0.755085593, green: 0.7882685688, blue: 0.8353505505, alpha: 1)))
-                    .frame(width: 50, height: 700)
-                
-                Capsule()
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.yellow]), startPoint: .bottom, endPoint: .top))
-                    .frame(width: 50, height: cambiarBarraPorcentaje())
-                
-            }
-            Text(String(format: "%.0f", dailyModeViewModel.calcularPorcentaje()) + "%")
-                .offset(y: -320)
-            
-        }.offset(x: 355, y: -190)
-    }
-    
-    // FUNCION: Calcular el cambio de la barra de progreso
-    func cambiarBarraPorcentaje() -> CGFloat {
-        let altura = 700
-        var nuevoTamaño = CGFloat(altura) * (dailyModeViewModel.calcularPorcentaje() / 100)
-        
-        if nuevoTamaño > 700 {
-            nuevoTamaño = 700
-        }
-        
-        return nuevoTamaño
-    }
-}
-
-*/

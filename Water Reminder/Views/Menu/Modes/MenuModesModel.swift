@@ -12,7 +12,7 @@ import Foundation
 // MARK: Modos del Menu (Modelo)
 //
 
-enum MenuModesData: Int, CaseIterable {
+enum MenuModesData: CaseIterable {
     case dailyMode
     case waterCalculator
     case drinkRest

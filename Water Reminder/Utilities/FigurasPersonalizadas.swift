@@ -16,7 +16,7 @@ struct SeccionDatos: View {
     
     var titulo: String!
     @Binding var contenido: String
-    var isPassword: Bool!
+    var isPassword: Bool = false
     
     @EnvironmentObject var firebaseViewModel: FirebaseViewModel
     
@@ -47,6 +47,97 @@ struct SeccionDatos: View {
     }
 }
 
+struct CustomDataField: View {
+    
+    @ObservedObject var text = TextCondition()
+    
+    var title: String
+    
+    var isPassword: Bool
+    
+    var width: CGFloat = 400
+    
+    @State var isTapped = false
+    
+    @State var isShowingPassword = false
+    
+    var body: some View {
+        VStack {
+            
+            VStack(alignment: .center, spacing: 4) {
+                
+                HStack(spacing: 15) {
+                    
+                    TextField("", text: $text.value) { (status) in
+                        if status {
+                            withAnimation(.easeIn, {
+                                isTapped = true
+                            })
+                        }
+                    } onCommit: {
+                        if text.value == "" {
+                            withAnimation(.easeOut, {
+                                isTapped = false
+                            })
+                        }
+                    }
+                    
+                    if isPassword {
+                        Button(action: {
+                            if isShowingPassword {
+                                isShowingPassword = false
+                            } else {
+                                isShowingPassword = true
+                            }
+                            
+                        }, label: {
+                            Image(systemName: isShowingPassword ? "eye" : "eye.slash")
+                                .foregroundColor(.gray)
+                        })
+                    }
+                }
+                .frame(width: width)
+                .padding(.top, isTapped ? 15 : 0)
+                .background(
+                    
+                    Text(title)
+                        .scaleEffect(isTapped ? 0.8 : 1)
+                        .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
+                        .foregroundColor(isTapped ? Color.accentColor : Color.gray)
+                    
+                    
+                    , alignment: .leading
+                )
+                
+                .padding(.horizontal)
+                
+                Rectangle()
+                    .fill(isTapped ? Color.accentColor : Color.gray)
+                    .opacity(isTapped ? 1 : 0.5)
+                    .frame(width: width, height: 1)
+                    .padding(.top, 10)
+                
+            }
+            .padding(.top, 15)
+            .background(Color.gray.opacity(0.09))
+            .cornerRadius(10)
+            
+        }
+    }
+}
+
+class TextCondition: ObservableObject {
+    @Published var value = "" /* {
+     didSet {
+     let filtered = value.filter { $0.isNumber }
+     
+     if value != filtered {
+     value = filtered
+     }
+     }
+     }*/
+}
+
 
 
 //
@@ -68,7 +159,77 @@ struct EsquinasRedondeadas: Shape {
 
 
 //
-// MARK: Vista de Fondo Degradado
+// MARK: Wave Background
+//
+
+struct WaveBackground: Shape {
+    let graphWidth: CGFloat
+    let amplitude: CGFloat
+    
+    func path(in rect: CGRect) -> Path {
+        let width = rect.width
+        let height = rect.height
+        
+        let origin = CGPoint(x: 0, y: height * 0.50)
+        
+        var path = Path()
+        path.move(to: origin)
+        
+        var endY: CGFloat = 0.0
+        let step = 5.0
+        for angle in stride(from: step, through: Double(width) * (step * step), by: step) {
+            let x = origin.x + CGFloat(angle/360.0) * width * graphWidth
+            let y = origin.y - CGFloat(sin(angle/180.0 * Double.pi)) * height * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+            endY = y
+        }
+        path.addLine(to: CGPoint(x: width, y: endY))
+        path.addLine(to: CGPoint(x: width, y: height))
+        path.addLine(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x: 0, y: origin.y))
+        
+        return path
+    }
+}
+
+
+
+//
+// MARK: Fondo con Borde Redondeado
+//
+
+struct FondoBordeRedondeado: View {
+    
+    var fondo: Color
+    
+    var borde: Color
+    
+    var width: CGFloat
+    var height: CGFloat
+    
+    var scaleX: CGFloat
+    var scaleY: CGFloat
+    
+    var radio: CGFloat
+    
+    var body: some View {
+        ZStack {
+            borde
+                .frame(width: width, height: height)
+                .clipShape(EsquinasRedondeadas(esquinas: .allCorners, radio: radio))
+                .scaleEffect(x: scaleX, y: scaleY)
+            
+            fondo
+                .frame(width: width, height: height)
+                .clipShape(EsquinasRedondeadas(esquinas: .allCorners, radio: radio))
+        }
+    }
+}
+
+
+
+//
+// MARK: Fondo Degradado
 //
 
 struct BackgroundView: View {
