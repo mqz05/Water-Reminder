@@ -348,6 +348,24 @@ struct MiniReturnHomeLayer: View {
 
 
 
+struct DiscontinousLine: View {
+    
+    var width: CGFloat
+    
+    
+    var body: some View {
+        Path { path in
+            
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: width, y: 0))
+        }.stroke(style: StrokeStyle(lineWidth: 1.5, dash: [5]))
+            .frame(height: 1.5)
+    }
+}
+
+/*
+
+
 //
 // MARK: Divisor Ancho Horizontal
 //
@@ -386,3 +404,4 @@ struct WiderDivisorVertical: View {
             .edgesIgnoringSafeArea(.vertical)
     }
 }
+*/

@@ -25,7 +25,7 @@ struct AccountView: View {
         ZStack {
             AccountViewBackground(isLoggingIn: $isLoggingIn)
             
-            DataView(isLoggingIn: $isLoggingIn).animation(.spring())
+            DataView(isLoggingIn: $isLoggingIn)
             
         }
         .frame(maxWidth: 834, maxHeight: 1194)
@@ -113,7 +113,7 @@ struct AccountViewBackground: View {
                 Ellipse()
                     .fill(Color(#colorLiteral(red: 0.06369515508, green: 0.1213632151, blue: 0.2552801967, alpha: 1)))
                     .opacity(isLoggingIn ? 0.08 : 1)
-                    .animation(.spring())
+                    .animation(.spring(), value: isLoggingIn)
                     .offset(x: -135)
                     .frame(width: 860, height: 1025)
                     .rotationEffect(.init(degrees: 90))
@@ -122,7 +122,7 @@ struct AccountViewBackground: View {
                 Ellipse()
                     .fill(Color(#colorLiteral(red: 0.06369515508, green: 0.1213632151, blue: 0.2552801967, alpha: 1)))
                     .opacity(isLoggingIn ? 0.08 : 1)
-                    .animation(.spring())
+                    .animation(.spring(), value: isLoggingIn)
                     .offset(x: -35)
                     .frame(width: 860, height: 1025)
                     .rotationEffect(.init(degrees: 90))

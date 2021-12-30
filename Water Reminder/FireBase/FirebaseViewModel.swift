@@ -28,7 +28,7 @@ class FirebaseViewModel: ObservableObject {
     
     @Published var userData: User = User(nickname: "Default", level: "Default", points: 0, dailyWaterAmount: 0, dailyWaterObjective: 2000)
     
-    @Published var drinkAmountToAdd: Int = 0
+    @Published var drinkDataToAdd: (String, Int) = ("", 0)
     
     @Published var porcentaje: CGFloat = 0
     
@@ -55,6 +55,7 @@ class FirebaseViewModel: ObservableObject {
     init() {
         self.fetchDate()
         self.fetchUserProfile()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.fetchUserData()
         })
@@ -62,8 +63,15 @@ class FirebaseViewModel: ObservableObject {
     }
     
     
-    // FUNCION: Iniciar Sesion
+    // Stats Data (Daily)
+    @Published var selectedDateData = SelectedDateWaterData(amountConsumed: 0, percentage: 0, typesOfDrinksAmount: [("", 0)], exists: false)
     
+    // Stats Data (Weekly & Monthly)
+    @Published var selectedWeekMonthData: SelectedWeekMonthWaterData = SelectedWeekMonthWaterData(amountConsumed: [], typesOfDrinksAmount: [])
+    
+    
+    
+    // FUNCION: Iniciar Sesion
     func logIn(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { [weak self] result, error in
             guard result != nil, error == nil else {
@@ -114,13 +122,13 @@ class FirebaseViewModel: ObservableObject {
         
         userData = User(nickname: "Default", level: "Default", points: 0, dailyWaterAmount: 0, dailyWaterObjective: 2000)
         self.porcentaje = 0
-        self.drinkAmountToAdd = 0
+        self.drinkDataToAdd.1 = 0
         
         self.loggedIn = false
     }
     
     
-    // FUNCION: Actualizar Datos
+    // FUNCION: Sincronizar Datos del Perfil
     
     func fetchUserProfile() {
         
@@ -151,6 +159,7 @@ class FirebaseViewModel: ObservableObject {
     }
     
     
+    // FUNCION: Sincronizar Datos Generales
     
     func fetchUserData() {
         
@@ -193,8 +202,9 @@ class FirebaseViewModel: ObservableObject {
     }
     
     
+    // FUNCION: Actualizar Datos "Daily Mode"
     
-    func updateUserData() {
+    func updateUserDailyData() {
         
         // Check if Logged In
         guard isLogedIn == true else {
@@ -212,20 +222,24 @@ class FirebaseViewModel: ObservableObject {
             
             if let document = document, document.exists {
                 
-                self.db.collection("usuarios").document(self.userEmail ?? "").collection("Daily data").document(self.currentDate).updateData([
-                    "Daily_Water_Amount" : self.userData.dailyWaterAmount
+                let dayData = self.db.collection("usuarios").document(self.userEmail ?? "").collection("Daily data").document(self.currentDate)
+                    
+                dayData.updateData([
+                    "Daily_Water_Amount" : self.userData.dailyWaterAmount,
+                    self.drinkDataToAdd.0: self.drinkDataToAdd.1
                 ])
+                
                 
             } else {
                 
-                self.db.collection("usuarios").document(self.userEmail ?? "").collection("Daily data").document(self.currentDate).updateData([
+                self.db.collection("usuarios").document(self.userEmail ?? "").collection("Daily data").document(self.currentDate).setData([
                     "Daily_Water_Amount" : self.userData.dailyWaterAmount
                 ])
             }
         })
     }
     
-    
+    // FUNCION: Actualizar Objetivo Diario
     
     func setWaterObjective() {
         
@@ -252,13 +266,157 @@ class FirebaseViewModel: ObservableObject {
         })
     }
     
-    
+    // FUNCION: Anadir Cantidad de Agua
     
     func addWaterAmountToTotal()  {
         withAnimation(.linear(duration: 2)) {
-            self.userData.dailyWaterAmount += self.drinkAmountToAdd
+            self.userData.dailyWaterAmount += self.drinkDataToAdd.1
             self.porcentaje = CGFloat(self.userData.dailyWaterAmount * 100 / self.userData.dailyWaterObjective)
-            self.drinkAmountToAdd = 0
         }
+        
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: {_ in
+            self.drinkDataToAdd.1 = 0
+        })
     }
+    
+    // FUNCION: Obtener Datos de una Fecha
+    
+    func setDataFromDate(date: Date) {
+        
+        // Check if Logged In
+        guard isLogedIn == true else {
+            return
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        
+        let selectedDate = formatter.string(from: date)
+        
+        
+        db.collection("usuarios").document(userEmail ?? "").collection("Daily data").document(selectedDate).getDocument(completion: { [self] document, error in
+            
+            guard error == nil else {
+                print("error", error ?? "")
+                self.selectedDateData.exists = false
+                return
+            }
+            
+            if let document = document, document.exists {
+                
+                let data = document.data()
+                
+                if let data = data {
+                    
+                    let amountConsumed = data["Daily_Water_Amount"] as? Int ?? 0
+                    
+                    if amountConsumed != 0 {
+                        
+                        let percentage = (amountConsumed * 100) / self.userData.dailyWaterObjective
+                        
+                        self.selectedDateData.amountConsumed = amountConsumed
+                        self.selectedDateData.percentage = percentage
+                        
+                        
+                        for (_, value) in data.enumerated() {
+                            if value.key != "Daily_Water_Amount" {
+                                self.selectedDateData.typesOfDrinksAmount.append((value.key, value.value as? Double ?? 0.0))
+                            }
+                        }
+                        
+                        self.selectedDateData.typesOfDrinksAmount.remove(at: 0)
+                        
+                        self.selectedDateData.exists = true
+                        
+                    } else {
+                        self.selectedDateData.exists = false
+                    }
+                }
+            } else {
+                self.selectedDateData.exists = false
+            }
+        })
+    }
+    
+    
+    // FUNCION: Obtener Datos de un Mes
+    
+    func getDataFromDates(dates: [DateValueModel]) {
+        
+        // Check if Logged In
+        guard isLogedIn == true else {
+            return
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        
+        self.selectedWeekMonthData = SelectedWeekMonthWaterData(amountConsumed: [], typesOfDrinksAmount: [])
+        
+        var mergedData: [String : Int]? = [:]
+        
+        
+        for i in 0...(dates.count - 1) {
+            
+                
+            let selectedDate = formatter.string(from: dates[i].date)
+            
+            db.collection("usuarios").document(userEmail ?? "").collection("Daily data").document(selectedDate).getDocument(completion: { [self] document, error in
+                
+                guard error == nil else {
+                    print("error", error ?? "")
+                    return
+                }
+                
+                if let document = document, document.exists {
+                    
+                    let data = document.data()
+                    
+                    if var data = data {
+                        
+                        let amountConsumed = data["Daily_Water_Amount"] as? Int ?? 0
+                        
+                        if amountConsumed != 0 {
+                            
+                            selectedWeekMonthData.amountConsumed.append((CGFloat(amountConsumed), dates[i].day))
+                            
+                            
+                            // Remove Daily Water
+                            data.removeValue(forKey: "Daily_Water_Amount")
+                            
+                            // Merge all types of drinks to one array
+                            mergedData?.merge(data as! [String : Int]) { (current, new) in (current + new) }
+                            
+                        } else {
+                            selectedWeekMonthData.amountConsumed.append((0, dates[i].day))
+                        }
+                    }
+                } else {
+                    selectedWeekMonthData.amountConsumed.append((0, dates[i].day))
+                }
+            })
+                
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            
+            guard let mergedData = mergedData else {
+                return
+            }
+            
+            var orderData: [(String, Int)] = []
+            
+            for (_, value) in mergedData.enumerated() {
+                
+                orderData.append((value.key, value.value))
+                
+            }
+            
+            self.selectedWeekMonthData.typesOfDrinksAmount = orderData.sorted {
+                ($0.1, $0.0) > ($1.1, $1.0)
+              }
+        })
+        
+    }
+    
 }

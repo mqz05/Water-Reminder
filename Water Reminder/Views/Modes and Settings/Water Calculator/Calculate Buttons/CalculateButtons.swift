@@ -52,8 +52,8 @@ struct CalculateButtons: View {
                     Text("Calculate")
                         .frame(width: 200, height: 60)
                         .font(.custom("DaggerSquare", size: 24))
-                        .foregroundColor(.secondaryLightBlue)
-                        .background(Color.secondaryDarkBlue)
+                        .foregroundColor(.secondaryLightBlue2)
+                        .background(Color.secondaryDarkBlue2)
                         .clipShape(EsquinasRedondeadas(esquinas: [.topLeft, .topRight], radio: 20))
                 })
                 
@@ -78,8 +78,8 @@ struct CalculateButtons: View {
                     Text("Set Objective")
                         .frame(width: 200, height: 60)
                         .font(.custom("DaggerSquare", size: 24))
-                        .foregroundColor(.secondaryLightBlue)
-                        .background(Color.secondaryDarkBlue)
+                        .foregroundColor(.secondaryLightBlue2)
+                        .background(Color.secondaryDarkBlue2)
                 })
                 
                 
@@ -101,8 +101,8 @@ struct CalculateButtons: View {
                     Text("Reset")
                         .frame(width: 200, height: 60)
                         .font(.custom("DaggerSquare", size: 24))
-                        .foregroundColor(.secondaryLightBlue)
-                        .background(Color.secondaryDarkBlue)
+                        .foregroundColor(.secondaryLightBlue2)
+                        .background(Color.secondaryDarkBlue2)
                         .clipShape(EsquinasRedondeadas(esquinas: [.bottomLeft, .bottomRight], radio: 20))
                 })
                 

@@ -21,7 +21,10 @@ struct AmountToAddAndQuantityButtons: View {
         VStack(spacing: 45) {
             HStack(spacing: 10) {
                 Text("Amount Consumed:")
-                Text("\(firebaseViewModel.drinkAmountToAdd) ml")
+                
+                let text = firebaseViewModel.drinkDataToAdd.1
+                
+                Text("\(text) ml")
                     .padding(5)
                     .border(Color.white, width: 3)
             }
@@ -33,23 +36,23 @@ struct AmountToAddAndQuantityButtons: View {
                     Button(action: {
                         if numeroBoton == 1 {
                             // Añadir 10ml
-                            firebaseViewModel.drinkAmountToAdd += 10
+                            firebaseViewModel.drinkDataToAdd.1 += 10
                             
                         } else if numeroBoton == 2 {
                             // Añadir 50ml
-                            firebaseViewModel.drinkAmountToAdd += 50
+                            firebaseViewModel.drinkDataToAdd.1 += 50
                             
                         } else if numeroBoton == 3 {
                             // Añadir 100ml
-                            firebaseViewModel.drinkAmountToAdd += 100
+                            firebaseViewModel.drinkDataToAdd.1 += 100
                             
                         } else if numeroBoton == 4 {
                             // Añadir 150ml
-                            firebaseViewModel.drinkAmountToAdd += 150
+                            firebaseViewModel.drinkDataToAdd.1 += 150
                             
                         } else {
                             // Añadir 200ml (a lo mejor añadir 330 ml o a la cantidad de un vaso, lata, etc.)
-                            firebaseViewModel.drinkAmountToAdd += 200
+                            firebaseViewModel.drinkDataToAdd.1 += 200
                         }
                         
                     }, label: {

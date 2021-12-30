@@ -22,6 +22,7 @@ struct AddAndResetButtons: View {
     
     @Binding var estadoActual: DailyModePhases
     
+    
     var body: some View {
         HStack {
             Button(action: {
@@ -42,7 +43,7 @@ struct AddAndResetButtons: View {
             
             Button(action: {
                 // Restablecer Cantidad (Boton Reset)
-                firebaseViewModel.drinkAmountToAdd = 0
+                firebaseViewModel.drinkDataToAdd.1 = 0
                 
             }, label: {
                 Text("Reset")
@@ -58,7 +59,7 @@ struct AddAndResetButtons: View {
         
         // Alerta de confirmacion para añadir cantidad de bebida al total
         .alert(isPresented: $showConfirmation, content: {
-            if firebaseViewModel.drinkAmountToAdd > 0 {
+            if firebaseViewModel.drinkDataToAdd.1 > 0 {
                 return Alert(
                     title: Text("Do you want to add this amount?"),
                     message: Text("Check the quantity"),
@@ -70,7 +71,7 @@ struct AddAndResetButtons: View {
                         
                         firebaseViewModel.addWaterAmountToTotal()
                         
-                        firebaseViewModel.updateUserData()
+                        firebaseViewModel.updateUserDailyData()
                         
                         waveViewModel.updateWaveMotion()
                     },

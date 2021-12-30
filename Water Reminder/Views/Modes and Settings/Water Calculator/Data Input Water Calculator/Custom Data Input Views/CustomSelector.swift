@@ -67,6 +67,6 @@ struct CustomGenderSelector: View {
         }
         .frame(width: 100, height: expand ? 185 : 40)
         .background(FondoBordeRedondeado(fondo: Color.primaryLightBlue2, borde: Color.primaryLightBlue1, width: 125, height: expand ? 185 : 40, scaleX: expand ? 1.1 : 1.1, scaleY: expand ? 1.08 : 1.25, radio: expand ? 20 : 13))
-        .animation(.spring())
+        .animation(.spring(), value: expand)
     }
 }

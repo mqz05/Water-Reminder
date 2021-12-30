@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		CA0BBFAD26CB040B006E5263 /* DaggerSquare.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0BBFAC26CB040B006E5263 /* DaggerSquare.otf */; };
 		CA0BBFB626CE8774006E5263 /* DailyModeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BBFB526CE8774006E5263 /* DailyModeTitle.swift */; };
 		CA0BBFCE26CEC1A1006E5263 /* AddDrinkQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0BBFCD26CEC1A1006E5263 /* AddDrinkQuantity.swift */; };
+		CA0F8076272336CF0022CCA6 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F8075272336CF0022CCA6 /* LineGraph.swift */; };
+		CA0F8078272583240022CCA6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0F8077272583240022CCA6 /* Colors.xcassets */; };
+		CA0F807A2725942E0022CCA6 /* MonthSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F80792725942E0022CCA6 /* MonthSelector.swift */; };
+		CA0F807C2725D4C50022CCA6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F807B2725D4C50022CCA6 /* StatisticsViewModel.swift */; };
+		CA0F807E27305C620022CCA6 /* WeekSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F807D27305C620022CCA6 /* WeekSelector.swift */; };
 		CA2195412673FEC9004340B3 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2195402673FEC9004340B3 /* DrinksModel.swift */; };
 		CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22605D25F3F56100EB4E32 /* MenuView.swift */; };
 		CA2A3FA226F7AA1700E3AE74 /* WaterCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3FA126F7AA1700E3AE74 /* WaterCalculatorModel.swift */; };
@@ -34,7 +39,12 @@
 		CA52C02726A4DC300055077A /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52C02626A4DC300055077A /* FirebaseViewModel.swift */; };
 		CA54790926C3EFC100744C3F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54790826C3EFC100744C3F /* ProgressBar.swift */; };
 		CA56718F26A04CB000B9504B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56718E26A04CB000B9504B /* AccountView.swift */; };
+		CA5716F02708F18A00F99B97 /* DailyStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5716EF2708F18A00F99B97 /* DailyStatistics.swift */; };
+		CA5716F42708F1D000F99B97 /* WeeklyStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5716F32708F1D000F99B97 /* WeeklyStatistics.swift */; };
+		CA5716F62708F1E700F99B97 /* MonthlyStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5716F52708F1E700F99B97 /* MonthlyStatistics.swift */; };
+		CA5716FC27090FA300F99B97 /* DateValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5716FB27090FA300F99B97 /* DateValueModel.swift */; };
 		CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */; };
+		CA75111C2712236800CEF693 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA75111B2712236800CEF693 /* PieChart.swift */; };
 		CA89494A26C9CA9D003FFACA /* DailyModePhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89494926C9CA9D003FFACA /* DailyModePhases.swift */; };
 		CA8A563926C7062300AE2D90 /* WavesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A563826C7062300AE2D90 /* WavesCollection.swift */; };
 		CA8A564126C7065400AE2D90 /* WavesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A564026C7065400AE2D90 /* WavesViewModel.swift */; };
@@ -42,7 +52,6 @@
 		CA8A565B26C7087000AE2D90 /* BubbleCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A565A26C7087000AE2D90 /* BubbleCollectionViewModel.swift */; };
 		CA8A566026C708D300AE2D90 /* BubbleModelAndViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A565F26C708D300AE2D90 /* BubbleModelAndViewModel.swift */; };
 		CA8A566826C708E900AE2D90 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8A566726C708E900AE2D90 /* Bubble.swift */; };
-		CA960B5126E7F3B2006D5136 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA960B5026E7F3B2006D5136 /* Colors.xcassets */; };
 		CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */; };
 		CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */; };
 		CABA84C126BDD17A003B38AA /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA84C026BDD17A003B38AA /* SelectButton.swift */; };
@@ -54,6 +63,7 @@
 		CABA850F26C1C1A7003B38AA /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA850E26C1C1A7003B38AA /* MenuSection.swift */; };
 		CABA851426C1C2F5003B38AA /* ManageAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA851326C1C2F5003B38AA /* ManageAccount.swift */; };
 		CABA853226C1E4E2003B38AA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA853126C1E4E2003B38AA /* UserModel.swift */; };
+		CAC41DCB27079166000D7095 /* CustomSegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC41DCA27079166000D7095 /* CustomSegmentedPicker.swift */; };
 		CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */; };
 		CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4425F2B35C0041733A /* Assets.xcassets */; };
 		CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD71A4725F2B35C0041733A /* Preview Assets.xcassets */; };
@@ -89,6 +99,11 @@
 		CA0BBFAC26CB040B006E5263 /* DaggerSquare.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaggerSquare.otf; sourceTree = "<group>"; };
 		CA0BBFB526CE8774006E5263 /* DailyModeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModeTitle.swift; sourceTree = "<group>"; };
 		CA0BBFCD26CEC1A1006E5263 /* AddDrinkQuantity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkQuantity.swift; sourceTree = "<group>"; };
+		CA0F8075272336CF0022CCA6 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		CA0F8077272583240022CCA6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CA0F80792725942E0022CCA6 /* MonthSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelector.swift; sourceTree = "<group>"; };
+		CA0F807B2725D4C50022CCA6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		CA0F807D27305C620022CCA6 /* WeekSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSelector.swift; sourceTree = "<group>"; };
 		CA2195402673FEC9004340B3 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
 		CA22605D25F3F56100EB4E32 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CA2A3FA126F7AA1700E3AE74 /* WaterCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculatorModel.swift; sourceTree = "<group>"; };
@@ -109,7 +124,12 @@
 		CA52C02626A4DC300055077A /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		CA54790826C3EFC100744C3F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		CA56718E26A04CB000B9504B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CA5716EF2708F18A00F99B97 /* DailyStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatistics.swift; sourceTree = "<group>"; };
+		CA5716F32708F1D000F99B97 /* WeeklyStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStatistics.swift; sourceTree = "<group>"; };
+		CA5716F52708F1E700F99B97 /* MonthlyStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyStatistics.swift; sourceTree = "<group>"; };
+		CA5716FB27090FA300F99B97 /* DateValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueModel.swift; sourceTree = "<group>"; };
 		CA5BFCE0268E0E1000883ABC /* FigurasPersonalizadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasPersonalizadas.swift; sourceTree = "<group>"; };
+		CA75111B2712236800CEF693 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		CA89494926C9CA9D003FFACA /* DailyModePhases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModePhases.swift; sourceTree = "<group>"; };
 		CA8A563826C7062300AE2D90 /* WavesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesCollection.swift; sourceTree = "<group>"; };
 		CA8A564026C7065400AE2D90 /* WavesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesViewModel.swift; sourceTree = "<group>"; };
@@ -117,7 +137,6 @@
 		CA8A565A26C7087000AE2D90 /* BubbleCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewModel.swift; sourceTree = "<group>"; };
 		CA8A565F26C708D300AE2D90 /* BubbleModelAndViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModelAndViewModel.swift; sourceTree = "<group>"; };
 		CA8A566726C708E900AE2D90 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
-		CA960B5026E7F3B2006D5136 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CA9FBD5A26A36F10007BC262 /* NewAcademy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewAcademy.ttf; sourceTree = "<group>"; };
 		CAB2D6A2269F9EAE005199AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CABA84C026BDD17A003B38AA /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
@@ -129,6 +148,7 @@
 		CABA850E26C1C1A7003B38AA /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		CABA851326C1C2F5003B38AA /* ManageAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccount.swift; sourceTree = "<group>"; };
 		CABA853126C1E4E2003B38AA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CAC41DCA27079166000D7095 /* CustomSegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedPicker.swift; sourceTree = "<group>"; };
 		CAD71A3D25F2B35A0041733A /* Water Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD71A4025F2B35A0041733A /* Water_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderApp.swift; sourceTree = "<group>"; };
 		CAD71A4425F2B35C0041733A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,8 +274,8 @@
 			children = (
 				CABA84B426BDC87A003B38AA /* Daily Mode */,
 				CABA84B526BDC888003B38AA /* Water Calculator */,
-				CABA852C26C1E29E003B38AA /* DrinkAndRest */,
 				CABA852326C1E286003B38AA /* Statistics */,
+				CABA852C26C1E29E003B38AA /* DrinkAndRest */,
 				CABA852226C1E27A003B38AA /* Settings */,
 				CABA851B26C1E269003B38AA /* Account */,
 			);
@@ -282,6 +302,30 @@
 			path = "Progress Bar";
 			sourceTree = "<group>";
 		};
+		CA5716EE2708F16300F99B97 /* Daily Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CA5716EF2708F18A00F99B97 /* DailyStatistics.swift */,
+			);
+			path = "Daily Statistics";
+			sourceTree = "<group>";
+		};
+		CA5716F12708F19D00F99B97 /* Weekly Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CA5716F32708F1D000F99B97 /* WeeklyStatistics.swift */,
+			);
+			path = "Weekly Statistics";
+			sourceTree = "<group>";
+		};
+		CA5716F22708F1AE00F99B97 /* Monthly Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CA5716F52708F1E700F99B97 /* MonthlyStatistics.swift */,
+			);
+			path = "Monthly Statistics";
+			sourceTree = "<group>";
+		};
 		CA8A563726C705CA00AE2D90 /* Waves */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				CAD71A4425F2B35C0041733A /* Assets.xcassets */,
-				CA960B5026E7F3B2006D5136 /* Colors.xcassets */,
+				CA0F8077272583240022CCA6 /* Colors.xcassets */,
 			);
 			path = "Assets & Colors";
 			sourceTree = "<group>";
@@ -337,7 +381,7 @@
 				CA0BBFB426CE8756006E5263 /* Title */,
 				CA54790726C3EF9C00744C3F /* Progress Bar */,
 				CABA84B926BDCD75003B38AA /* Select Drinks Button */,
-				CABA84DA26C06DE9003B38AA /* Drinks Scroll View */,
+				CABA84DA26C06DE9003B38AA /* Drinks Carousel */,
 				CA0BBFC626CEC037006E5263 /* Add Quantity View */,
 			);
 			path = "Daily Mode";
@@ -379,14 +423,14 @@
 			path = "Add Water Button";
 			sourceTree = "<group>";
 		};
-		CABA84DA26C06DE9003B38AA /* Drinks Scroll View */ = {
+		CABA84DA26C06DE9003B38AA /* Drinks Carousel */ = {
 			isa = PBXGroup;
 			children = (
 				CA2195402673FEC9004340B3 /* DrinksModel.swift */,
 				CA3553E726CFDC640088D67C /* DrinksCarousel.swift */,
 				CABA84FF26C07788003B38AA /* Drinks Buttons */,
 			);
-			path = "Drinks Scroll View";
+			path = "Drinks Carousel";
 			sourceTree = "<group>";
 		};
 		CABA84F526C07567003B38AA /* Utilities */ = {
@@ -485,7 +529,13 @@
 		CABA852326C1E286003B38AA /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				CA5716FB27090FA300F99B97 /* DateValueModel.swift */,
 				CA475B7D25F50B9F000535D0 /* StatisticsView.swift */,
+				CA0F807B2725D4C50022CCA6 /* StatisticsViewModel.swift */,
+				CAC41DC92707913E000D7095 /* Custom Statistics Items */,
+				CA5716EE2708F16300F99B97 /* Daily Statistics */,
+				CA5716F12708F19D00F99B97 /* Weekly Statistics */,
+				CA5716F22708F1AE00F99B97 /* Monthly Statistics */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -506,6 +556,18 @@
 				CA475B6D25F50B5D000535D0 /* Modes and Settings */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CAC41DC92707913E000D7095 /* Custom Statistics Items */ = {
+			isa = PBXGroup;
+			children = (
+				CAC41DCA27079166000D7095 /* CustomSegmentedPicker.swift */,
+				CA75111B2712236800CEF693 /* PieChart.swift */,
+				CA0F80792725942E0022CCA6 /* MonthSelector.swift */,
+				CA0F807D27305C620022CCA6 /* WeekSelector.swift */,
+				CA0F8075272336CF0022CCA6 /* LineGraph.swift */,
+			);
+			path = "Custom Statistics Items";
 			sourceTree = "<group>";
 		};
 		CAD71A3425F2B35A0041733A = {
@@ -663,7 +725,7 @@
 				};
 			};
 			buildConfigurationList = CAD71A3825F2B35A0041733A /* Build configuration list for PBXProject "Water Reminder" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -690,7 +752,7 @@
 				CA0BBFAD26CB040B006E5263 /* DaggerSquare.otf in Resources */,
 				CAD71A4825F2B35C0041733A /* Preview Assets.xcassets in Resources */,
 				CAD71A4525F2B35C0041733A /* Assets.xcassets in Resources */,
-				CA960B5126E7F3B2006D5136 /* Colors.xcassets in Resources */,
+				CA0F8078272583240022CCA6 /* Colors.xcassets in Resources */,
 				CAB2D6A3269F9EAE005199AB /* GoogleService-Info.plist in Resources */,
 				CA9FBD5B26A36F10007BC262 /* NewAcademy.ttf in Resources */,
 			);
@@ -824,13 +886,17 @@
 				CA8A566026C708D300AE2D90 /* BubbleModelAndViewModel.swift in Sources */,
 				CA52C02726A4DC300055077A /* FirebaseViewModel.swift in Sources */,
 				CA475B7425F50B81000535D0 /* WaterCalculatorView.swift in Sources */,
+				CA0F8076272336CF0022CCA6 /* LineGraph.swift in Sources */,
 				CA8A564626C7068500AE2D90 /* WavesModel.swift in Sources */,
 				CA22605E25F3F56100EB4E32 /* MenuView.swift in Sources */,
+				CA5716F02708F18A00F99B97 /* DailyStatistics.swift in Sources */,
 				CABA84D326BDD404003B38AA /* AddWaterButton.swift in Sources */,
 				CA475B6F25F50B75000535D0 /* DailyModeView.swift in Sources */,
 				CA54790926C3EFC100744C3F /* ProgressBar.swift in Sources */,
+				CA5716FC27090FA300F99B97 /* DateValueModel.swift in Sources */,
 				CA2A3FB026F7ACDC00E3AE74 /* CustomPicker.swift in Sources */,
 				CA8A566826C708E900AE2D90 /* Bubble.swift in Sources */,
+				CAC41DCB27079166000D7095 /* CustomSegmentedPicker.swift in Sources */,
 				CA475B7E25F50B9F000535D0 /* StatisticsView.swift in Sources */,
 				CA5BFCE1268E0E1000883ABC /* FigurasPersonalizadas.swift in Sources */,
 				CA2195412673FEC9004340B3 /* DrinksModel.swift in Sources */,
@@ -839,6 +905,8 @@
 				CABA853226C1E4E2003B38AA /* UserModel.swift in Sources */,
 				CA04B4F925F3A7A600F64F6D /* MainView.swift in Sources */,
 				CA0BBFCE26CEC1A1006E5263 /* AddDrinkQuantity.swift in Sources */,
+				CA0F807C2725D4C50022CCA6 /* StatisticsViewModel.swift in Sources */,
+				CA0F807E27305C620022CCA6 /* WeekSelector.swift in Sources */,
 				CA2A3FA226F7AA1700E3AE74 /* WaterCalculatorModel.swift in Sources */,
 				CA8A564126C7065400AE2D90 /* WavesViewModel.swift in Sources */,
 				CAD71A4125F2B35A0041733A /* Water_ReminderApp.swift in Sources */,
@@ -849,13 +917,17 @@
 				CA3553E826CFDC640088D67C /* DrinksCarousel.swift in Sources */,
 				CA2A3FAB26F7AC1700E3AE74 /* CustomSelector.swift in Sources */,
 				CABA850926C1C103003B38AA /* MenuModes.swift in Sources */,
+				CA75111C2712236800CEF693 /* PieChart.swift in Sources */,
+				CA5716F62708F1E700F99B97 /* MonthlyStatistics.swift in Sources */,
 				CA56718F26A04CB000B9504B /* AccountView.swift in Sources */,
 				CA4FADE726C59BDC00FBD8E8 /* BubbleCollection.swift in Sources */,
 				CA42175A26D90F3200AA77C0 /* TotalWater.swift in Sources */,
 				CA475B6625F50722000535D0 /* MenuModesModel.swift in Sources */,
 				CABA850426C1C0C9003B38AA /* Profile.swift in Sources */,
 				CABA84C126BDD17A003B38AA /* SelectButton.swift in Sources */,
+				CA5716F42708F1D000F99B97 /* WeeklyStatistics.swift in Sources */,
 				CA42174D26D90F1100AA77C0 /* DataInputWaterCalculator.swift in Sources */,
+				CA0F807A2725942E0022CCA6 /* MonthSelector.swift in Sources */,
 				CABA84ED26C06FCD003B38AA /* DrinksButtons.swift in Sources */,
 				CA2A3FB526F7AD3800E3AE74 /* CustomStepper.swift in Sources */,
 				CA8A563926C7062300AE2D90 /* WavesCollection.swift in Sources */,
@@ -948,7 +1020,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Water Reminder/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1004,7 +1076,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Water Reminder/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1018,14 +1090,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 116758173D78C6EEC6947ECF /* Pods-Water Reminder.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Water Reminder/Preview Content\"";
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1041,14 +1115,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCE85689672B49F0FBF5E8F4 /* Pods-Water Reminder.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Water Reminder/Preview Content\"";
 				DEVELOPMENT_TEAM = W82S8CAK69;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Water Reminder/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

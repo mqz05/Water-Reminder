@@ -160,17 +160,17 @@ struct PlusMinusButton: View {
             Circle()
                 .fill(pressed ? Color.purple : Color.lightPurple)
                 .frame(width: 35, height: 35)
-                .animation(.linear)
+                .animation(.linear, value: pressed)
             
             Capsule()
                 .fill(pressed ? Color.lightPurple : Color.purple)
-                .animation(.linear)
+                .animation(.linear, value: pressed)
                 .frame(width: 20, height: 2)
             
             pressViewModel.isPlus
                 ? Capsule()
                 .fill(pressed ? Color.lightPurple : Color.purple)
-                .animation(.linear)
+                .animation(.linear, value: pressed)
                 .frame(width: 2, height: 20)
                 : nil
         }

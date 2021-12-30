@@ -42,6 +42,9 @@ struct DailyModeView: View {
                             withAnimation(Animation.spring(), {
                                 estadoActual = .home
                             })
+                            
+                            firebaseViewModel.drinkDataToAdd.1 = 0
+                            
                         }, label: {
                             Image(systemName: "chevron.backward.circle")
                                 .resizable()
